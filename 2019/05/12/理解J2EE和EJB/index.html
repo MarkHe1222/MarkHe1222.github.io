@@ -96,13 +96,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="马根花的小菜园">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="在介绍这些概念之前我们先理解一下另外两个概念POJO和JavaBean。 POJOPOJO(Plain Oridinary Java Object/ Plain Old Java Object) 称为简单Java对象，具体定义是：有一些private参数作为对象的属性，然后针对每个参数定义get和set方法供外部访问，没有任何类即成，也没有实现任何借口，更没有引用任何气态框架的java对象； 例子">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="理解J2EE和EJB">
+<meta property="og:url" content="http://yoursite.com/2019/05/12/理解J2EE和EJB/index.html">
 <meta property="og:site_name" content="马根花的小菜园">
+<meta property="og:description" content="在介绍这些概念之前我们先理解一下另外两个概念POJO和JavaBean。 POJOPOJO(Plain Oridinary Java Object/ Plain Old Java Object) 称为简单Java对象，具体定义是：有一些private参数作为对象的属性，然后针对每个参数定义get和set方法供外部访问，没有任何类即成，也没有实现任何借口，更没有引用任何气态框架的java对象； 例子">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-05-12T17:49:03.929Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马根花的小菜园">
+<meta name="twitter:title" content="理解J2EE和EJB">
+<meta name="twitter:description" content="在介绍这些概念之前我们先理解一下另外两个概念POJO和JavaBean。 POJOPOJO(Plain Oridinary Java Object/ Plain Old Java Object) 称为简单Java对象，具体定义是：有一些private参数作为对象的属性，然后针对每个参数定义get和set方法供外部访问，没有任何类即成，也没有实现任何借口，更没有引用任何气态框架的java对象； 例子">
 
 
 
@@ -110,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/05/12/理解J2EE和EJB/"/>
 
 
 
@@ -120,7 +125,7 @@
   };
 </script>
 
-  <title>马根花的小菜园</title>
+  <title>理解J2EE和EJB | 马根花的小菜园</title>
   
 
 
@@ -168,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -207,7 +211,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -303,9 +307,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -337,10 +341,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/12/理解J2EE和EJB/" class="post-title-link" itemprop="url">理解J2EE和EJB</a>
+          <h1 class="post-title" itemprop="name headline">理解J2EE和EJB
+
               
             
           </h1>
@@ -434,9 +436,7 @@
       
 
       
-        
-          
-            <p>在介绍这些概念之前我们先理解一下另外两个概念POJO和JavaBean。</p>
+        <p>在介绍这些概念之前我们先理解一下另外两个概念POJO和JavaBean。</p>
 <h3 id="POJO"><a href="#POJO" class="headerlink" title="POJO"></a><strong>POJO</strong></h3><p>POJO(Plain Oridinary Java Object/ Plain Old Java Object) 称为简单Java对象，具体定义是：有一些private参数作为对象的属性，然后针对每个参数定义get和set方法供外部访问，没有任何类即成，也没有实现任何借口，更没有引用任何气态框架的java对象；</p>
 <p>例子：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> String name;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.name = name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> age;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.age = age;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -468,8 +468,6 @@
 <p><a href="https://www.cnblogs.com/ggjucheng/archive/2012/01/06/2314067.html" target="_blank" rel="noopener">缺点</a>：</p>
 <p>如果是较为简单的方法调用，其执行效率也许会比本地执行慢很多，即使和远程Socket机制的简单数据返回的应用相比，也会慢一些，原因是，其在网络间需要传递的信息不仅仅包含该函数的返回值信息，还会包含该对象序列化后的字节内容。</p>
 
-          
-        
       
     </div>
 
@@ -490,14 +488,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -507,14 +511,15 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -534,8 +539,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -615,6 +629,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#POJO"><span class="nav-number">1.</span> <span class="nav-text">POJO</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JavaBean"><span class="nav-number">2.</span> <span class="nav-text">JavaBean</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#J2EE"><span class="nav-number">3.</span> <span class="nav-text">J2EE</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EJB"><span class="nav-number">4.</span> <span class="nav-text">EJB</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EJB的实现技术"><span class="nav-number">4.1.</span> <span class="nav-text">-     EJB的实现技术</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#RMI"><span class="nav-number">4.1.1.</span> <span class="nav-text">-    RMI </span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -743,6 +774,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -758,6 +793,8 @@
 
   
 
+
+  
 
 
   

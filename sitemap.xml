@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2018/07/24/hello-world/</loc>
+    <loc>http://yoursite.com/2019/05/12/%E7%90%86%E8%A7%A3J2EE%E5%92%8CEJB/</loc>
     
-    <lastmod>2018-07-23T16:44:34.691Z</lastmod>
+    <lastmod>2019-05-12T17:49:03.929Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    
+    <lastmod>2019-05-12T17:48:18.855Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    
+    <lastmod>2019-05-12T17:46:41.460Z</lastmod>
     
   </url>
   
