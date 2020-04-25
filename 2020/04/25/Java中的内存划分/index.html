@@ -96,20 +96,20 @@
 
 
 
-  <meta name="description" content="Java 的内存划分形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：  栈（Stack）：存放的都是方法中的局部变量；方法的运行在栈当中。 局部变量：方法的参数，或者是方法{}内部的变量 作用域：一旦超出作用域，立刻从栈内存释放  堆（Heap）：凡是new出来的（对象/基础类型），都存放在堆内存中。 堆内存的存放的（对象）都有一个地址值：16进制 堆内存里面的数据都有默认值。规则：">
+  <meta name="description" content="形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：  栈（Stack）：存放的都是方法中的局部变量；方法的运行在栈当中。 局部变量：方法的参数，或者是方法{}内部的变量 作用域：一旦超出作用域，立刻从栈内存释放  堆（Heap）：凡是new出来的（对象/基础类型），都存放在堆内存中。 堆内存的存放的（对象）都有一个地址值：16进制 堆内存里面的数据都有默认值。规则： a. 若为整数in">
 <meta name="keywords" content="Memory">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java中的内存划分">
 <meta property="og:url" content="http://yoursite.com/2020/04/25/Java中的内存划分/index.html">
 <meta property="og:site_name" content="马根花的小菜园">
-<meta property="og:description" content="Java 的内存划分形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：  栈（Stack）：存放的都是方法中的局部变量；方法的运行在栈当中。 局部变量：方法的参数，或者是方法{}内部的变量 作用域：一旦超出作用域，立刻从栈内存释放  堆（Heap）：凡是new出来的（对象/基础类型），都存放在堆内存中。 堆内存的存放的（对象）都有一个地址值：16进制 堆内存里面的数据都有默认值。规则：">
+<meta property="og:description" content="形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：  栈（Stack）：存放的都是方法中的局部变量；方法的运行在栈当中。 局部变量：方法的参数，或者是方法{}内部的变量 作用域：一旦超出作用域，立刻从栈内存释放  堆（Heap）：凡是new出来的（对象/基础类型），都存放在堆内存中。 堆内存的存放的（对象）都有一个地址值：16进制 堆内存里面的数据都有默认值。规则： a. 若为整数in">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/.com//JavaMemory.png">
-<meta property="og:updated_time" content="2020-04-25T16:00:40.463Z">
+<meta property="og:image" content="http://yoursite.com/2020/04/25/Java中的内存划分/JavaMemory.png">
+<meta property="og:updated_time" content="2020-04-25T16:21:00.838Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java中的内存划分">
-<meta name="twitter:description" content="Java 的内存划分形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：  栈（Stack）：存放的都是方法中的局部变量；方法的运行在栈当中。 局部变量：方法的参数，或者是方法{}内部的变量 作用域：一旦超出作用域，立刻从栈内存释放  堆（Heap）：凡是new出来的（对象/基础类型），都存放在堆内存中。 堆内存的存放的（对象）都有一个地址值：16进制 堆内存里面的数据都有默认值。规则：">
-<meta name="twitter:image" content="http://yoursite.com/.com//JavaMemory.png">
+<meta name="twitter:description" content="形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：  栈（Stack）：存放的都是方法中的局部变量；方法的运行在栈当中。 局部变量：方法的参数，或者是方法{}内部的变量 作用域：一旦超出作用域，立刻从栈内存释放  堆（Heap）：凡是new出来的（对象/基础类型），都存放在堆内存中。 堆内存的存放的（对象）都有一个地址值：16进制 堆内存里面的数据都有默认值。规则： a. 若为整数in">
+<meta name="twitter:image" content="http://yoursite.com/2020/04/25/Java中的内存划分/JavaMemory.png">
 
 
 
@@ -386,7 +386,7 @@
                 
                   <span class="post-meta-item-text">Edited on</span>
                 
-                <time title="Modified: 2020-04-26 00:00:40" itemprop="dateModified" datetime="2020-04-26T00:00:40+08:00">2020-04-26</time>
+                <time title="Modified: 2020-04-26 00:21:00" itemprop="dateModified" datetime="2020-04-26T00:21:00+08:00">2020-04-26</time>
               
             
           </span>
@@ -438,7 +438,7 @@
       
 
       
-        <h2 id="Java-的内存划分"><a href="#Java-的内存划分" class="headerlink" title="Java 的内存划分"></a>Java 的内存划分</h2><p>形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：</p>
+        <p>形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：</p>
 <ol>
 <li><p>栈（Stack）：存放的都是方法中的局部变量；方法的运行在栈当中。</p>
 <p>局部变量：方法的参数，或者是方法{}内部的变量</p>
@@ -465,7 +465,8 @@
 <p><strong>运行结果：</strong></p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[I@<span class="number">1</span>d44bcfa</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line">==============</span><br><span class="line">[I@<span class="number">1</span>d44bcfa</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">20</span></span><br></pre></td></tr></table></figure>
 <p><strong>内存分布图：</strong></p>
-<p><img src="/.com//JavaMemory.png" alt="JavaMemory"></p>
+<p><img src="/2020/04/25/Java中的内存划分/JavaMemory.png" alt="JavaMemory"></p>
+<p>PS： <a href="https://www.dazhuanlan.com/2019/12/18/5df99e24d6d27/" target="_blank" rel="noopener">一个解决hexo插入图片的问题</a></p>
 
       
     </div>
@@ -554,17 +555,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
-          </li>
-        </ul>
-      
 
-      <div class="site-overview-wrap sidebar-panel">
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -650,23 +642,6 @@
         </div>
       </div>
 
-      
-      <!--noindex-->
-        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-            
-            
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Java-的内存划分"><span class="nav-number">1.</span> <span class="nav-text">Java 的内存划分</span></a></li></ol></div>
-            
-
-          </div>
-        </div>
-      <!--/noindex-->
       
 
       
