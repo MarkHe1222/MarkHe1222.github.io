@@ -77,5 +77,9 @@ public class DemoMemory {
 
 ![JavaMemory](Java中的内存划分/JavaMemory.png)
 
-PS： [一个解决hexo插入图片的问题](https://www.dazhuanlan.com/2019/12/18/5df99e24d6d27/)
+**附件：**
+
+- [解决hexo插入图片的问题](https://www.dazhuanlan.com/2019/12/18/5df99e24d6d27/)
+
+- [视频简介](https://www.bilibili.com/video/BV1A4411K7Gx?p=86)
 
