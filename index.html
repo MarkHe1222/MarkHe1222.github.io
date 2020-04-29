@@ -320,6 +320,174 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/Leetcode-2-两数相加/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马根花的小菜园">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/04/30/Leetcode-2-两数相加/" class="post-title-link" itemprop="url">Leetcode-2-两数相加</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-04-30 00:03:54 / Modified: 00:12:16" itemprop="dateCreated datePublished" datetime="2020-04-30T00:03:54+08:00">2020-04-30</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2.两数相加"></a>2.两数相加</h2><p><strong>题目：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</span><br><span class="line"></span><br><span class="line">如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</span><br><span class="line"></span><br><span class="line">您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</span><br></pre></td></tr></table></figure>
+<p><strong>示例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span><br><span class="line">输出：7 -&gt; 0 -&gt; 8</span><br><span class="line">原因：342 + 465 = 807</span><br></pre></td></tr></table></figure>
+<p><strong>思路：</strong></p>
+<p>数字倒叙相加，向下进一。可以从数学的角度来思考。</p>
+<p><strong>代码：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">        ListNode res = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode cur = res;</span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span> || carry != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> l1Val = l1 != <span class="keyword">null</span> ? l1.val : <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> l2Val = l2 != <span class="keyword">null</span> ? l2.val : <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> sumVal = carry + l1Val + l2Val;</span><br><span class="line">            carry = sumVal / <span class="number">10</span>;</span><br><span class="line">            cur.next = <span class="keyword">new</span> ListNode(sumVal%<span class="number">10</span>);</span><br><span class="line">            cur = cur.next;</span><br><span class="line">            <span class="keyword">if</span> (l1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/27/Leetcode-9-回文数/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1872,212 +2040,13 @@
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/05/12/理解J2EE和EJB/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/12/理解J2EE和EJB/" class="post-title-link" itemprop="url">理解J2EE和EJB</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2019-05-12 13:04:23" itemprop="dateCreated datePublished" datetime="2019-05-12T13:04:23+08:00">2019-05-12</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2019-05-13 01:49:03" itemprop="dateModified" datetime="2019-05-13T01:49:03+08:00">2019-05-13</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>在介绍这些概念之前我们先理解一下另外两个概念POJO和JavaBean。</p>
-<h3 id="POJO"><a href="#POJO" class="headerlink" title="POJO"></a><strong>POJO</strong></h3><p>POJO(Plain Oridinary Java Object/ Plain Old Java Object) 称为简单Java对象，具体定义是：有一些private参数作为对象的属性，然后针对每个参数定义get和set方法供外部访问，没有任何类即成，也没有实现任何借口，更没有引用任何气态框架的java对象；</p>
-<p>例子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> String name;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.name = name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> age;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.age = age;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="JavaBean"><a href="#JavaBean" class="headerlink" title="JavaBean"></a><strong>JavaBean</strong></h3><p>JavaBean是一种用Java语言写成的可重用组件。JavaBean符合一定规范编写的Java类。所以JavaBean不是一种技术，而是一种规范。大家针对这种规范，总结了很多开发技巧，做出很多组件或工具。符合这种规范的类，可以被其它的程序员或者框架使用。</p>
-<p>总结出来的规范为：</p>
-<ul>
-<li>所有属性都为private；</li>
-<li>这个类必须有一个公共的缺省的构造函数(即无参数的构造器)；</li>
-<li>这个类的属性只能使用get和set来访问，其它的方法遵从<a href="https://blog.csdn.net/u012116457/article/details/22582393" target="_blank" rel="noopener">Java标准命名规范</a>;</li>
-<li>这个类是可<a href="http://www.blogjava.net/jiangshachina/archive/2012/02/13/369898.html" target="_blank" rel="noopener">序列化的</a>(实现serializable接口)</li>
-</ul>
-<p>例子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserInfo</span> <span class="keyword">implements</span> <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span></span>&#123; </span><br><span class="line"> </span><br><span class="line">    <span class="comment">//实现serializable接口。  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;  </span><br><span class="line"> </span><br><span class="line">    <span class="keyword">private</span> String name;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;  </span><br><span class="line">      </span><br><span class="line">    <span class="comment">//无参构造器  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">UserInfo</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">	</span><br><span class="line">    &#125;  </span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.name = name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> age;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.age = age;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">//javabean当中可以有其它的逻辑方法  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">userInfoPrint</span><span class="params">()</span></span>&#123;  </span><br><span class="line">        System.out.println(<span class="string">""</span>);  </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="J2EE"><a href="#J2EE" class="headerlink" title="J2EE"></a><strong>J2EE</strong></h3><p>介绍完前面的POJO和JavaBean现在开始介绍J2EE。</p>
-<p>首先要区分的是J2EE和Java的不同，其实Java不仅仅是代表了编程语言，应该是代表了一种编程体系(软件系统系统的一种流派)，比如，和其相对应地另外一大体系是出自微软的.NET.</p>
-<p>J2EE(Java 2 Platform, Enterprise Edition)可以理解为:</p>
-<blockquote>
-<p><strong>J2EE = Java2 + 开发企业级软件的标准</strong></p>
-</blockquote>
-<pre><code>*注： 从java 1.2 以后的版本都称为Java2*
-</code></pre><p>所以可解释为J2EE是基于Java2的基础上，为了合理利用软件开发公用复用的原则，而订制的一系列的标准，而通常这些标准又会以一系列的软件库的形式存在(同一个标准可以有多个实现)。所以进一步的通俗理解：J2EE就是分别为java领域的企业软件开发提供的一系列的软件库，供大家使用。这里的软件库，有框架的，也有驱动库等等。</p>
-<h3 id="EJB"><a href="#EJB" class="headerlink" title="EJB"></a><strong>EJB</strong></h3><p>EJB(Enterprise JavaBean)其实就是J2EE这个标准中的一项关键技术，是普通JavaBeans的一种提升和规范，因为企业信息系统开发中需要一个可伸缩的性能和事务、安全机制，这样能保证企业系统平滑发展，而不是发展到一种规模重新更换一套软件系统。</p>
-<p><strong>官方解释</strong>：商务软件的核心部分是它的业务逻辑。业务逻辑抽象了整个商务过程的流程，并使用计算机语言将他们实现。</p>
-<p>一般的应用场景是比较重量级的企业级应用当中，这种业务逻辑会很繁重和复杂，EJB其实就是将属于业务逻辑当中的那些类都从客户端抽离出来，放到一个组件中，并将这个组件放到服务器上运行。</p>
-<h4 id="EJB的实现技术"><a href="#EJB的实现技术" class="headerlink" title="-     EJB的实现技术"></a><strong>-     EJB的实现技术</strong></h4><p>EJB 是运行在独立服务器上的组件，客户端是通过网络对EJB 对象进行调用的。在Java中，能够实现远程对象调用的技术是RMI(Remote Method Invocation)，而EJB 技术基础正是RMI。通过RMI 技术，J2EE将EJB 组件创建为远程对象，客户端就可以通过网络调用EJB 对象了。</p>
-<h5 id="RMI"><a href="#RMI" class="headerlink" title="-    RMI "></a><strong>-    <a href="https://blog.csdn.net/peterkang202/article/details/52397147" target="_blank" rel="noopener">RMI</a> </strong></h5><p>中文名称是”远程方法调用”，它就是利用Java 对象序列化的机制实现分布式计算，实现远程类对象的实例化以及调用的方法。说的更清楚些，就是利用对象序列化来实现远程调用，也就是上面两个概念的结合体，利用这个方法来调用远程的类的时候，就不需要编写Socket 程序了，也不需要把对象进行序列化操作，直接调用就行了非常方便。远程方法调用是一种计算机之间对象互相调用对方函数，启动对方进程的一种机制，使用这种机制，某一台计算机上的对象在调用另外一台计算机上的方法时，使用的程序语法规则和在本地机上对象间的方法调用的语法规则一样。</p>
-<p><strong>优点：</strong> </p>
-<p>这种机制给分布计算的系统设计、编程都带来了极大的方便。只要按照RMI 规则设计程序，可以不必再过问在RMI 之下的网络细节了，如：TCP 和Socket 等等。任意两台计算机之间的通讯完全由RMI 负责。调用远程计算机上的对象就像本地对象一样方便。RMI 可将完整的对象作为参数和返回值进行传递，而不仅仅是预定义的数据类型。也就是说，可以将类似Java 哈西表这样的复杂类型作为一个参数进行传递。</p>
-<p><a href="https://www.cnblogs.com/ggjucheng/archive/2012/01/06/2314067.html" target="_blank" rel="noopener">缺点</a>：</p>
-<p>如果是较为简单的方法调用，其执行效率也许会比本地执行慢很多，即使和远程Socket机制的简单数据返回的应用相比，也会慢一些，原因是，其在网络间需要传递的信息不仅仅包含该函数的返回值信息，还会包含该对象序列化后的字节内容。</p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
+  </nav>
+
 
 
           </div>
@@ -2117,7 +2086,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-count">11</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
