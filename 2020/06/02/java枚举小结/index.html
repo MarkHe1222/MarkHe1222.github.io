@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.1">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.1">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.1" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.1.1',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="为什么要用枚举一般情况下，我们可以用常量来进行一些类型的定义。以开发流程的状态为列，开发流程一般分为：design, develop,test,release几个阶段，可以使用几个静态常量来定义： 123456public class Development &amp;#123;    public static final int DESIGN = 0;    public static final i">
+<meta name="keywords" content="Java">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java枚举小结">
+<meta property="og:url" content="http://yoursite.com/2020/06/02/java枚举小结/index.html">
+<meta property="og:site_name" content="马根花的小菜园">
+<meta property="og:description" content="为什么要用枚举一般情况下，我们可以用常量来进行一些类型的定义。以开发流程的状态为列，开发流程一般分为：design, develop,test,release几个阶段，可以使用几个静态常量来定义： 123456public class Development &amp;#123;    public static final int DESIGN = 0;    public static final i">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-06-03T16:39:15.389Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Java枚举小结">
+<meta name="twitter:description" content="为什么要用枚举一般情况下，我们可以用常量来进行一些类型的定义。以开发流程的状态为列，开发流程一般分为：design, develop,test,release几个阶段，可以使用几个静态常量来定义： 123456public class Development &amp;#123;    public static final int DESIGN = 0;    public static final i">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="http://yoursite.com/2020/06/02/java枚举小结/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>Java枚举小结 | 马根花的小菜园</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">马根花的小菜园</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+    
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/02/java枚举小结/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马根花的小菜园">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Java枚举小结
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-06-02 22:23:45" itemprop="dateCreated datePublished" datetime="2020-06-02T22:23:45+08:00">2020-06-02</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Edited on</span>
+                
+                <time title="Modified: 2020-06-04 00:39:15" itemprop="dateModified" datetime="2020-06-04T00:39:15+08:00">2020-06-04</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java-Basic/" itemprop="url" rel="index"><span itemprop="name">Java Basic</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="为什么要用枚举"><a href="#为什么要用枚举" class="headerlink" title="为什么要用枚举"></a>为什么要用枚举</h3><p>一般情况下，我们可以用常量来进行一些类型的定义。以开发流程的状态为列，开发流程一般分为：<code>design</code>, <code>develop</code>,<code>test</code>,<code>release</code>几个阶段，可以使用几个静态常量来定义：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Development</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DESIGN = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEVELOP = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TEST = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> RELEASE = <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这种定义其实也是可以的，但是会存在一些隐患。比如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">checkStatus</span><span class="params">(<span class="keyword">int</span> status)</span></span>&#123;</span><br><span class="line">...</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<p>这个方法的本意是根据数据的数字来判断<code>Development</code>的状态，但是如果输入<code>0~4</code>范围以外的<code>int</code>编译器也不会抛出任何的警告。</p>
+<p>但是枚举可以使用更强更严谨的约束，可以帮我们规避掉这个风险，并且代码也更加简洁，有更好的可读性。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> DevelopEnum &#123;</span><br><span class="line">    Plan, Develop, Test, Release;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>我们在编写的时候，编译器此时就可以帮我们检查问题，防止我们疏忽造成问题。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">checkStatus</span><span class="params">(DevelopEnum status)</span> </span>&#123;</span><br><span class="line">...</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="枚举的基本实现原理"><a href="#枚举的基本实现原理" class="headerlink" title="枚举的基本实现原理"></a>枚举的基本实现原理</h3><p>实际上，枚举本身也是一个类，我们可以通过编译上面的<code>DevelopEnum.java</code>文件，可以得到一个<code>DevelopEnum.clsss</code>文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Mark:enumeration mark$ ls</span><br><span class="line">Check.java       DevelopEnum.java Development.java</span><br><span class="line">Mark:enumeration mark$ javac DevelopEnum.java </span><br><span class="line">Mark:enumeration mark$ ls</span><br><span class="line">Check.java        DevelopEnum.class DevelopEnum.java  Development.java</span><br></pre></td></tr></table></figure>
+<p>将<code>DevelopEnum.class</code>反编译可得到一下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Mark:enumeration mark$ javap DevelopEnum.class </span><br><span class="line">Compiled from <span class="string">"DevelopEnum.java"</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">interview</span>.<span class="title">enumeration</span>.<span class="title">DevelopEnum</span> <span class="keyword">extends</span> <span class="title">java</span>.<span class="title">lang</span>.<span class="title">Enum</span>&lt;<span class="title">interview</span>.<span class="title">enumeration</span>.<span class="title">DevelopEnum</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> interview.enumeration.DevelopEnum Plan;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> interview.enumeration.DevelopEnum Develop;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> interview.enumeration.DevelopEnum Test;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> interview.enumeration.DevelopEnum Release;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> interview.enumeration.DevelopEnum[] values();</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> interview.enumeration.<span class="function">DevelopEnum <span class="title">valueOf</span><span class="params">(java.lang.String)</span></span>;</span><br><span class="line">  <span class="keyword">static</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>可知，编译器帮我生成了一个<code>DevelopEnum</code>的类，该类继承自<code>java.lang.Enum</code> ，并且该类是无法被继承的<code>final</code> ;还生成了4个<code>DevelopEnum</code>的实例对象，分别对应枚举中定义的4个变量，这也说明了，我使用的枚举变量其实是<code>DevelopEnum</code>的对象；同时编译器生成了2个<code>static</code>方法，分别是<code>values()</code>和<code>valueOf()</code>; 最后h还有一个空的静态代码块<code>static {}</code>。</p>
+<p>其中<code>values()</code>和<code>valueOf()</code>：</p>
+<p>查看了一下<code>Enum.java</code>其中只有<code>valueOf()</code>并没有<code>values()</code>，所以<code>values()</code>应该是编译器为我们生成的。作用分别为：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DevelopEnum[] developEnums = DevelopEnum.values();        System.out.println(Arrays.toString(developEnums));<span class="comment">// [Plan, Develop, Test, Release]</span></span><br><span class="line">DevelopEnum value = DevelopEnum.valueOf(<span class="string">"Plan"</span>);</span><br><span class="line">System.out.println(value); <span class="comment">// Plan</span></span><br></pre></td></tr></table></figure>
+<h3 id="枚举常用方法"><a href="#枚举常用方法" class="headerlink" title="枚举常用方法"></a>枚举常用方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    DevelopEnum d1 = DevelopEnum.Plan;</span><br><span class="line">    DevelopEnum d2 = DevelopEnum.Develop;</span><br><span class="line">    DevelopEnum d3 = DevelopEnum.Test;</span><br><span class="line">    DevelopEnum d4 = DevelopEnum.Release;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ordinal() 返回枚举的序列号，从0开始</span></span><br><span class="line">    System.out.println(d1.ordinal()); <span class="comment">// 0</span></span><br><span class="line">    System.out.println(d2.ordinal()); <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// compareTo() 枚举常量的比较</span></span><br><span class="line">    System.out.println(d1.compareTo(d2)); <span class="comment">// -1</span></span><br><span class="line">    System.out.println(d2.compareTo(d1)); <span class="comment">// 1 </span></span><br><span class="line">    System.out.println(d3.compareTo(d3)); <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//name() 获取枚举常量的名称</span></span><br><span class="line">    System.out.println(d1.name()); <span class="comment">// </span></span><br><span class="line">    System.out.println(d2.name());</span><br></pre></td></tr></table></figure>
+<h3 id="枚举的自定义扩充"><a href="#枚举的自定义扩充" class="headerlink" title="枚举的自定义扩充"></a>枚举的自定义扩充</h3><p>上面的例子是比较简单的<strong>单值</strong>用法，很多情况下我们需要<strong>多值</strong>用法， 我们就前面的例子继续拓展。通过前面的学习我们也知道枚举本身是一个类，所以我们也可以在枚举的定义中加入属性、构造函数、方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> DevelopEnumNew &#123;</span><br><span class="line">    Plan(<span class="string">"plan"</span>, <span class="number">000</span>),</span><br><span class="line">    Develop(<span class="string">"develop"</span>, <span class="number">111</span>),</span><br><span class="line">    Test(<span class="string">"test"</span>, <span class="number">222</span>),</span><br><span class="line">    Release(<span class="string">"release"</span>, <span class="number">333</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String stage;</span><br><span class="line">    <span class="keyword">private</span> Integer code;</span><br><span class="line"></span><br><span class="line">    DevelopEnumNew(String stage, Integer code) &#123;</span><br><span class="line">        <span class="keyword">this</span>.stage = stage;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getStage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> stage;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">getCodeByStageName</span><span class="params">(String stage)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (DevelopEnumNew enums : DevelopEnumNew.values()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (enums.stage.equals(stage)) &#123;</span><br><span class="line">                <span class="keyword">return</span> enums.getCode();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>既然是类，那自然也可以和接口(<code>interface</code>)结合使用，举个例子：</p>
+<p><strong>a. 当不使用枚举时：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">checkStatus</span><span class="params">(String status)</span> </span>&#123;</span><br><span class="line">    String result = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">"Plan"</span>.equals(status)) &#123;</span><br><span class="line">        result = <span class="string">"Status: "</span> + <span class="string">"Plan"</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">"Develop"</span>.equals(status)) &#123;</span><br><span class="line">        result = <span class="string">"Status: "</span> + <span class="string">"Develop"</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">"Test"</span>.equals(status)) &#123;</span><br><span class="line">        result = <span class="string">"Status: "</span> + <span class="string">"Test"</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">"Release"</span>.equals(status)) &#123;</span><br><span class="line">        result = <span class="string">"Status: "</span> + <span class="string">"Release"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>b. 使用枚举时：</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">checkStatus</span><span class="params">(DevelopEnum status)</span> </span>&#123;</span><br><span class="line">    String result = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">switch</span> (status) &#123;</span><br><span class="line">        <span class="keyword">case</span> Plan:</span><br><span class="line">            result = <span class="string">"Status: "</span> + <span class="string">"Plan"</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> Develop:</span><br><span class="line">            result = <span class="string">"Status: "</span> + <span class="string">"Develop"</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> Test:</span><br><span class="line">            result = <span class="string">"Status: "</span> + <span class="string">"Test"</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> Release:</span><br><span class="line">            result = <span class="string">"Status: "</span> + <span class="string">"Release"</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong>c. 使用枚举 + 接口时：</strong></p>
+<p>接口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">logging</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> String <span class="title">log</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>枚举：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span>  DevelopEnumImpl implements logging &#123;</span><br><span class="line">    Plan &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">log</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Plan"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    Develop &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">log</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Develop"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    Test &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">log</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Test"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    Release &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">log</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Release"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>用法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">checkStatusImpl</span><span class="params">(String status)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> DevelopEnumImpl.valueOf(status).log();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>对比可知，明显枚举 + 接口的方法具有更强的拓展性，并且代码也更加优雅。如果想要对条件继续扩充的话，可以再定义新的借口，再到枚举中添加代码，而不用对主逻辑的代码进行改动。</p>
+<h3 id="枚举的集合类"><a href="#枚举的集合类" class="headerlink" title="枚举的集合类"></a>枚举的集合类</h3><h4 id="a-EnumSet"><a href="#a-EnumSet" class="headerlink" title="a. EnumSet"></a>a. EnumSet</h4><p><code>EnumSet</code>是枚举类型专用的<code>Set</code>集合。<code>EnumSet</code>不允许使用<code>null</code>元素，如果再<code>EnumSet</code>当中插入<code>null</code>，则会跑出<code>NullPointerException</code>，但是如果判断<code>EnumSet</code>当中是否存在<code>null</code>元素是否存在，或者删除<code>null</code>元素则不会抛异常。<code>EnumSet</code>不是线程安全的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Boolean <span class="title">isDev</span><span class="params">(Dev dev)</span></span>&#123;</span><br><span class="line">    EnumSet&lt;DevelopEnum&gt; enums = EnumSet.of(DevelopEnum.Plan, DevelopEnum.Develop);</span><br><span class="line">    <span class="keyword">if</span> (enums.contains(dev.getName())) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="b-EnumMap"><a href="#b-EnumMap" class="headerlink" title="b. EnumMap"></a>b. EnumMap</h4><p><code>EnumMap</code>是枚举的专属集合，其<code>Key</code>要求必须为<code>Enum</code>类型。注意<code>EnumMap</code>的<code>Key</code>不能为<code>null</code>，因为<code>EnumMap</code>继承了<code>AbstractMap</code>，所以<code>EnumMap</code>也有一般<code>map</code>的方法。还有个不同的地方是，在<code>new EnumMap&lt;&gt;(enum.class);</code>需要传入类型信息，即<code>Class</code>对象。</p>
+<p>假设PM要统计所有项目的开发状态：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">EnumMap&lt;DevelopEnum, Integer&gt; enumIntegerEnumMap = <span class="keyword">new</span> EnumMap&lt;&gt;(DevelopEnum.class);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (Project project: projects) &#123;</span><br><span class="line">    Integer num = enumIntegerEnumMap.get(project.getDevStatus);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">null</span> != num) &#123;</span><br><span class="line">        enumIntegerEnumMap.put(project.getDevStatus, num+<span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        enumIntegerEnumMap.put(project.getDevStatus, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="枚举的设计模式应用"><a href="#枚举的设计模式应用" class="headerlink" title="枚举的设计模式应用"></a>枚举的设计模式应用</h3><h4 id="a-单例模式"><a href="#a-单例模式" class="headerlink" title="a. 单例模式"></a>a. 单例模式</h4><h4 id="b-策略模式"><a href="#b-策略模式" class="headerlink" title="b. 策略模式"></a>b. 策略模式</h4>
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Java/" rel="tag"># Java</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/05/10/Java技术路线/" rel="next" title="Java技术路线">
+                <i class="fa fa-chevron-left"></i> Java技术路线
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Mark</p>
+              <div class="site-description motion-element" itemprop="description"></div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">16</span>
+                    <span class="site-state-item-name">posts</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">categories</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">tags</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要用枚举"><span class="nav-number">1.</span> <span class="nav-text">为什么要用枚举</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举的基本实现原理"><span class="nav-number">2.</span> <span class="nav-text">枚举的基本实现原理</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举常用方法"><span class="nav-number">3.</span> <span class="nav-text">枚举常用方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举的自定义扩充"><span class="nav-number">4.</span> <span class="nav-text">枚举的自定义扩充</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举的集合类"><span class="nav-number">5.</span> <span class="nav-text">枚举的集合类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-EnumSet"><span class="nav-number">5.1.</span> <span class="nav-text">a. EnumSet</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b-EnumMap"><span class="nav-number">5.2.</span> <span class="nav-text">b. EnumMap</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#枚举的设计模式应用"><span class="nav-number">6.</span> <span class="nav-text">枚举的设计模式应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#a-单例模式"><span class="nav-number">6.1.</span> <span class="nav-text">a. 单例模式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#b-策略模式"><span class="nav-number">6.2.</span> <span class="nav-text">b. 策略模式</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mark</span>
+
+  
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.1.1</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.1"></script>
+
+  <script src="/js/motion.js?v=7.1.1"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/schemes/muse.js?v=7.1.1"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.1"></script>
+
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
