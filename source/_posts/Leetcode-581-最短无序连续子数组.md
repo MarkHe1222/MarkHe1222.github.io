@@ -1,7 +1,7 @@
 ---
 title: Leetcode-581-最短无序连续子数组
 date: 2020-05-04 00:58:14
-categories: Algroithm
+categories: Algorithm
 tags: Leetcode
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: Java枚举小结
 date: 2020-06-02 22:23:45
-categories: Java Basic
-tags: Java
+categories: Java
+tags: Java Basic
 
 ---
 

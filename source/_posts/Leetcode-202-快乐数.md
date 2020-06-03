@@ -1,7 +1,7 @@
 ---
 title: Leetcode-202-快乐数
 date: 2020-05-06 01:19:36
-categories: Algroithm 
+categories: Algorithm 
 tags: Leetcode
 
 ---
