@@ -73,7 +73,7 @@ public final class interview.enumeration.DevelopEnum extends java.lang.Enum<inte
 }
 ```
 
-可知，编译器帮我生成了一个`DevelopEnum`的类，该类继承自`java.lang.Enum` ，并且该类是无法被继承的`final` ;还生成了4个`DevelopEnum`的实例对象，分别对应枚举中定义的4个变量，这也说明了，我使用的枚举变量其实是`DevelopEnum`的对象；同时编译器生成了2个`static`方法，分别是`values()`和`valueOf()`; 最后h还有一个空的静态代码块`static {}`。
+可知，编译器帮我生成了一个`DevelopEnum`的类，该类继承自`java.lang.Enum` ，并且该类是无法被继承的`final` ;还生成了4个`DevelopEnum`的实例对象，分别对应枚举中定义的4个变量，这也说明了，我使用的枚举变量其实是`DevelopEnum`的对象；同时编译器生成了2个`static`方法，分别是`values()`和`valueOf()`; 最后还有一个空的静态代码块`static {}`。
 
 其中`values()`和`valueOf()`：
 
@@ -103,8 +103,8 @@ System.out.println(value); // Plan
         System.out.println(d3.compareTo(d3)); // 0
 
 				//name() 获取枚举常量的名称
-        System.out.println(d1.name()); // 
-        System.out.println(d2.name());
+        System.out.println(d1.name()); // Plan
+        System.out.println(d2.name()); // Develop
 ```
 
 ### 枚举的自定义扩充
