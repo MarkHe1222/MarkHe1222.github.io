@@ -96,13 +96,18 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="马根花的小菜园">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="什么是泛型？泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。泛型的本质是为了参数化类型（在不创建新的类型的情况下，通过泛型指定的不同类型来控制形参具体限制的类型）。也">
+<meta name="keywords" content="Java Basic">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java泛型小结">
+<meta property="og:url" content="http://yoursite.com/2020/06/14/Java泛型小结/index.html">
 <meta property="og:site_name" content="马根花的小菜园">
+<meta property="og:description" content="什么是泛型？泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。泛型的本质是为了参数化类型（在不创建新的类型的情况下，通过泛型指定的不同类型来控制形参具体限制的类型）。也">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-07-02T14:00:38.058Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="马根花的小菜园">
+<meta name="twitter:title" content="Java泛型小结">
+<meta name="twitter:description" content="什么是泛型？泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。泛型的本质是为了参数化类型（在不创建新的类型的情况下，通过泛型指定的不同类型来控制形参具体限制的类型）。也">
 
 
 
@@ -110,7 +115,7 @@
 
   
   
-  <link rel="canonical" href="http://yoursite.com/">
+  <link rel="canonical" href="http://yoursite.com/2020/06/14/Java泛型小结/">
 
 
 
@@ -120,7 +125,7 @@
   };
 </script>
 
-  <title>马根花的小菜园</title>
+  <title>Java泛型小结 | 马根花的小菜园</title>
   
 
 
@@ -168,8 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -207,7 +211,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -303,9 +307,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -337,10 +341,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/06/14/Java泛型小结/" class="post-title-link" itemprop="url">Java泛型小结</a>
+          <h1 class="post-title" itemprop="name headline">Java泛型小结
+
               
             
           </h1>
@@ -434,9 +436,7 @@
       
 
       
-        
-          
-            <h3 id="什么是泛型？"><a href="#什么是泛型？" class="headerlink" title="什么是泛型？"></a>什么是泛型？</h3><p>泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。<br><strong>泛型的本质是为了参数化类型（在不创建新的类型的情况下，通过泛型指定的不同类型来控制形参具体限制的类型）</strong>。也就是说在泛型使用过程中，操作的数据类型被指定为一个参数，这种参数类型可以用在类、接口和方法中，分别被称为<strong>泛型类、泛型接口、泛型方法</strong>。</p>
+        <h3 id="什么是泛型？"><a href="#什么是泛型？" class="headerlink" title="什么是泛型？"></a>什么是泛型？</h3><p>泛型，即“参数化类型”。一提到参数，最熟悉的就是定义方法时有形参，然后调用此方法时传递实参。那么参数化类型怎么理解呢？顾名思义，就是将类型由原来的具体的类型参数化，类似于方法中的变量参数，此时类型也定义成参数形式（可以称之为类型形参），然后在使用/调用时传入具体的类型（类型实参）。<br><strong>泛型的本质是为了参数化类型（在不创建新的类型的情况下，通过泛型指定的不同类型来控制形参具体限制的类型）</strong>。也就是说在泛型使用过程中，操作的数据类型被指定为一个参数，这种参数类型可以用在类、接口和方法中，分别被称为<strong>泛型类、泛型接口、泛型方法</strong>。</p>
 <h3 id="为什么要用泛型？"><a href="#为什么要用泛型？" class="headerlink" title="为什么要用泛型？"></a>为什么要用泛型？</h3><p>创建一个<code>List</code>，不指定类型的话，则可以添加任意类型:</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">GenericsDemo1</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        List arrayList = <span class="keyword">new</span> ArrayList();</span><br><span class="line">        arrayList.add(<span class="string">"string"</span>);</span><br><span class="line">        arrayList.add(<span class="number">1</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arrayList.size(); i++) &#123;</span><br><span class="line">            System.out.println(arrayList.get(i));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Output:</span></span><br><span class="line">string</span><br><span class="line"><span class="number">1</span></span><br></pre></td></tr></table></figure>
 <p>但是如果如果需要以<code>String</code>的类型来处理<code>arrayList</code>内的元素，则编译的时候会遇到错误(编译器不报错)：</p>
@@ -622,8 +622,6 @@
 <li><a href="https://www.cnblogs.com/wuqinglong/p/9456193.html" target="_blank" rel="noopener">Java泛型类型擦除以及类型擦除带来的问题</a></li>
 </ul>
 
-          
-        
       
     </div>
 
@@ -644,392 +642,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/14/KMP匹配算法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/06/14/KMP匹配算法/" class="post-title-link" itemprop="url">KMP匹配算法</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-06-14 21:04:06 / Modified: 21:13:12" itemprop="dateCreated datePublished" datetime="2020-06-14T21:04:06+08:00">2020-06-14</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/Java-Basic/" rel="tag"># Java Basic</a>
           
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>好几次遇到关于KMP匹配算法的使用，但是每次看到以后都忘了，所以这里做个记录。</p>
-<p>在B站看到三哥的2个视频，算是讲KMP最简单通俗的视频了：</p>
-<ol>
-<li><a href="https://www.bilibili.com/video/BV1kJ411u7pt" target="_blank" rel="noopener">KMP算法原理和流程</a></li>
-<li><a href="https://www.bilibili.com/video/BV1iJ411u74L?t=350" target="_blank" rel="noopener">如何创建next数组(前缀)</a></li>
-</ol>
-<p>上代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">strStr</span><span class="params">(String haystack, String needle)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (haystack == <span class="keyword">null</span> || needle == <span class="keyword">null</span> || haystack.length() &lt; needle.length()) &#123;</span><br><span class="line">            <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> ((haystack.length() == <span class="number">0</span> &amp;&amp; needle.length() == <span class="number">0</span>) || (haystack.length() &gt; <span class="number">0</span> &amp;&amp; needle.length() == <span class="number">0</span>)) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="comment">// KMP的核心，先创建next数组</span></span><br><span class="line">        <span class="keyword">int</span>[] next = genNext(needle);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>, j = <span class="number">0</span>; i &lt; haystack.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; haystack.charAt(i) != needle.charAt(j)) &#123;</span><br><span class="line">                j = next[j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (haystack.charAt(i) == needle.charAt(j)) &#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> (j == needle.length()) &#123;</span><br><span class="line">                <span class="keyword">return</span> i - (j - <span class="number">1</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span>[] genNext(String needle) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] next = <span class="keyword">new</span> <span class="keyword">int</span>[needle.length()];</span><br><span class="line">        <span class="keyword">if</span> (needle.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> next;</span><br><span class="line">        &#125;</span><br><span class="line">        next[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>, j = <span class="number">0</span>; i &lt; needle.length(); i++) &#123;</span><br><span class="line">            <span class="keyword">while</span> (j &gt; <span class="number">0</span> &amp;&amp; needle.charAt(i) != needle.charAt(j)) &#123;</span><br><span class="line">                j = next[j - <span class="number">1</span>];</span><br><span class="line">            &#125;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span>(needle.charAt(i) == needle.charAt(j)) &#123;</span><br><span class="line">                j++;</span><br><span class="line">            &#125;</span><br><span class="line">            next[i] = j;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
       
 
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/02/java枚举小结/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/06/02/java枚举小结/" class="post-title-link" itemprop="url">Java枚举小结</a>
-              
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
+              <a href="/2020/06/14/KMP匹配算法/" rel="next" title="KMP匹配算法">
+                <i class="fa fa-chevron-left"></i> KMP匹配算法
+              </a>
             
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-06-02 22:23:45" itemprop="dateCreated datePublished" datetime="2020-06-02T22:23:45+08:00">2020-06-02</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2020-06-04 22:30:42" itemprop="dateModified" datetime="2020-06-04T22:30:42+08:00">2020-06-04</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h3 id="为什么要用枚举"><a href="#为什么要用枚举" class="headerlink" title="为什么要用枚举"></a>为什么要用枚举</h3><p>一般情况下，我们可以用常量来进行一些类型的定义。以开发流程的状态为列，开发流程一般分为：<code>design</code>, <code>develop</code>,<code>test</code>,<code>release</code>几个阶段，可以使用几个静态常量来定义：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Development</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DESIGN = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> DEVELOP = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TEST = <span class="number">2</span>;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> RELEASE = <span class="number">3</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>这种定义其实也是可以的，但是会存在一些隐患。比如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">checkStatus</span><span class="params">(<span class="keyword">int</span> status)</span></span>&#123;</span><br><span class="line">...</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<p>这个方法的本意是根据数据的数字来判断<code>Development</code>的状态，但是如果输入<code>0~4</code>范围以外的<code>int</code>编译器也不会抛出任何的警告。</p>
-<p>但是枚举可以使用更强更严谨的约束，可以帮我们规避掉这个风险，并且代码也更加简洁，有更好的可读性。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> DevelopEnum &#123;</span><br><span class="line">    Plan, Develop, Test, Release;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>我们在编写的时候，编译器此时就可以帮我们检查问题，防止我们疏忽造成问题。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">checkStatus</span><span class="params">(DevelopEnum status)</span> </span>&#123;</span><br><span class="line">...</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="枚举的基本实现原理"><a href="#枚举的基本实现原理" class="headerlink" title="枚举的基本实现原理"></a>枚举的基本实现原理</h3><p>实际上，枚举本身也是一个类，我们可以通过编译上面的<code>DevelopEnum.java</code>文件，可以得到一个<code>DevelopEnum.clsss</code>文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Mark:enumeration mark$ ls</span><br><span class="line">Check.java       DevelopEnum.java Development.java</span><br><span class="line">Mark:enumeration mark$ javac DevelopEnum.java </span><br><span class="line">Mark:enumeration mark$ ls</span><br><span class="line">Check.java        DevelopEnum.class DevelopEnum.java  Development.java</span><br></pre></td></tr></table></figure>
-<p>将<code>DevelopEnum.class</code>反编译可得到一下代码：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">Mark:enumeration mark$ javap DevelopEnum.class </span><br><span class="line">Compiled from <span class="string">"DevelopEnum.java"</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="class"><span class="keyword">class</span> <span class="title">interview</span>.<span class="title">enumeration</span>.<span class="title">DevelopEnum</span> <span class="keyword">extends</span> <span class="title">java</span>.<span class="title">lang</span>.<span class="title">Enum</span>&lt;<span class="title">interview</span>.<span class="title">enumeration</span>.<span class="title">DevelopEnum</span>&gt; </span>&#123;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> interview.enumeration.DevelopEnum Plan;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> interview.enumeration.DevelopEnum Develop;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> interview.enumeration.DevelopEnum Test;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> interview.enumeration.DevelopEnum Release;</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> interview.enumeration.DevelopEnum[] values();</span><br><span class="line">  <span class="keyword">public</span> <span class="keyword">static</span> interview.enumeration.<span class="function">DevelopEnum <span class="title">valueOf</span><span class="params">(java.lang.String)</span></span>;</span><br><span class="line">  <span class="keyword">static</span> &#123;&#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>可知，编译器帮我生成了一个<code>DevelopEnum</code>的类，该类继承自<code>java.lang.Enum</code> ，并且该类是无法被继承的<code>final</code> ;还生成了4个<code>DevelopEnum</code>的实例对象，分别对应枚举中定义的4个变量，这也说明了，我使用的枚举变量其实是<code>DevelopEnum</code>的对象；同时编译器生成了2个<code>static</code>方法，分别是<code>values()</code>和<code>valueOf()</code>; 最后还有一个空的静态代码块<code>static {}</code>。</p>
-<p>其中<code>values()</code>和<code>valueOf()</code>：</p>
-<p>查看了一下<code>Enum.java</code>其中只有<code>valueOf()</code>并没有<code>values()</code>，所以<code>values()</code>应该是编译器为我们生成的。作用分别为：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">DevelopEnum[] developEnums = DevelopEnum.values();        System.out.println(Arrays.toString(developEnums));<span class="comment">// [Plan, Develop, Test, Release]</span></span><br><span class="line">DevelopEnum value = DevelopEnum.valueOf(<span class="string">"Plan"</span>);</span><br><span class="line">System.out.println(value); <span class="comment">// Plan</span></span><br></pre></td></tr></table></figure>
-<h3 id="枚举常用方法"><a href="#枚举常用方法" class="headerlink" title="枚举常用方法"></a>枚举常用方法</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    DevelopEnum d1 = DevelopEnum.Plan;</span><br><span class="line">    DevelopEnum d2 = DevelopEnum.Develop;</span><br><span class="line">    DevelopEnum d3 = DevelopEnum.Test;</span><br><span class="line">    DevelopEnum d4 = DevelopEnum.Release;</span><br><span class="line"></span><br><span class="line"><span class="comment">// ordinal() 返回枚举的序列号，从0开始</span></span><br><span class="line">    System.out.println(d1.ordinal()); <span class="comment">// 0</span></span><br><span class="line">    System.out.println(d2.ordinal()); <span class="comment">// 1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// compareTo() 枚举常量的比较</span></span><br><span class="line">    System.out.println(d1.compareTo(d2)); <span class="comment">// -1</span></span><br><span class="line">    System.out.println(d2.compareTo(d1)); <span class="comment">// 1 </span></span><br><span class="line">    System.out.println(d3.compareTo(d3)); <span class="comment">// 0</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//name() 获取枚举常量的名称</span></span><br><span class="line">    System.out.println(d1.name()); <span class="comment">// Plan</span></span><br><span class="line">    System.out.println(d2.name()); <span class="comment">// Develop</span></span><br></pre></td></tr></table></figure>
-<h3 id="枚举的自定义扩充"><a href="#枚举的自定义扩充" class="headerlink" title="枚举的自定义扩充"></a>枚举的自定义扩充</h3><p>上面的例子是比较简单的<strong>单值</strong>用法，很多情况下我们需要<strong>多值</strong>用法， 我们就前面的例子继续拓展。通过前面的学习我们也知道枚举本身是一个类，所以我们也可以在枚举的定义中加入属性、构造函数、方法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> DevelopEnumNew &#123;</span><br><span class="line">    Plan(<span class="string">"plan"</span>, <span class="number">000</span>),</span><br><span class="line">    Develop(<span class="string">"develop"</span>, <span class="number">111</span>),</span><br><span class="line">    Test(<span class="string">"test"</span>, <span class="number">222</span>),</span><br><span class="line">    Release(<span class="string">"release"</span>, <span class="number">333</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> String stage;</span><br><span class="line">    <span class="keyword">private</span> Integer code;</span><br><span class="line"></span><br><span class="line">    DevelopEnumNew(String stage, Integer code) &#123;</span><br><span class="line">        <span class="keyword">this</span>.stage = stage;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getStage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> stage;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Integer <span class="title">getCodeByStageName</span><span class="params">(String stage)</span></span>&#123;</span><br><span class="line">        <span class="keyword">for</span> (DevelopEnumNew enums : DevelopEnumNew.values()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (enums.stage.equals(stage)) &#123;</span><br><span class="line">                <span class="keyword">return</span> enums.getCode();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>既然是类，那自然也可以和接口(<code>interface</code>)结合使用，举个例子：</p>
-<p><strong>a. 当不使用枚举时：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">checkStatus</span><span class="params">(String status)</span> </span>&#123;</span><br><span class="line">    String result = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">if</span> (<span class="string">"Plan"</span>.equals(status)) &#123;</span><br><span class="line">        result = <span class="string">"Status: "</span> + <span class="string">"Plan"</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">"Develop"</span>.equals(status)) &#123;</span><br><span class="line">        result = <span class="string">"Status: "</span> + <span class="string">"Develop"</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">"Test"</span>.equals(status)) &#123;</span><br><span class="line">        result = <span class="string">"Status: "</span> + <span class="string">"Test"</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="string">"Release"</span>.equals(status)) &#123;</span><br><span class="line">        result = <span class="string">"Status: "</span> + <span class="string">"Release"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>b. 使用枚举时：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">checkStatus</span><span class="params">(DevelopEnum status)</span> </span>&#123;</span><br><span class="line">    String result = <span class="string">""</span>;</span><br><span class="line">    <span class="keyword">switch</span> (status) &#123;</span><br><span class="line">        <span class="keyword">case</span> Plan:</span><br><span class="line">            result = <span class="string">"Status: "</span> + <span class="string">"Plan"</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> Develop:</span><br><span class="line">            result = <span class="string">"Status: "</span> + <span class="string">"Develop"</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> Test:</span><br><span class="line">            result = <span class="string">"Status: "</span> + <span class="string">"Test"</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">case</span> Release:</span><br><span class="line">            result = <span class="string">"Status: "</span> + <span class="string">"Release"</span>;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        <span class="keyword">default</span>:</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>c. 使用枚举 + 接口时：</strong></p>
-<p>接口：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">logging</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">abstract</span> String <span class="title">log</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>枚举：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span>  DevelopEnumImpl implements logging &#123;</span><br><span class="line">    Plan &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">log</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Plan"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    Develop &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">log</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Develop"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    Test &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">log</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Test"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    Release &#123;</span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> String <span class="title">log</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"Release"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>用法：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> String <span class="title">checkStatusImpl</span><span class="params">(String status)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> DevelopEnumImpl.valueOf(status).log();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>对比可知，明显枚举 + 接口的方法具有更强的拓展性，并且代码也更加优雅。如果想要对条件继续扩充的话，可以再定义新的借口，再到枚举中添加代码，而不用对主逻辑的代码进行改动。</p>
-<h3 id="枚举的集合类"><a href="#枚举的集合类" class="headerlink" title="枚举的集合类"></a>枚举的集合类</h3><h4 id="a-EnumSet"><a href="#a-EnumSet" class="headerlink" title="a. EnumSet"></a>a. EnumSet</h4><p><code>EnumSet</code>是枚举类型专用的<code>Set</code>集合。<code>EnumSet</code>不允许使用<code>null</code>元素，如果再<code>EnumSet</code>当中插入<code>null</code>，则会跑出<code>NullPointerException</code>，但是如果判断<code>EnumSet</code>当中是否存在<code>null</code>元素是否存在，或者删除<code>null</code>元素则不会抛异常。<code>EnumSet</code>不是线程安全的。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Boolean <span class="title">isDev</span><span class="params">(Dev dev)</span></span>&#123;</span><br><span class="line">    EnumSet&lt;DevelopEnum&gt; enums = EnumSet.of(DevelopEnum.Plan, DevelopEnum.Develop);</span><br><span class="line">    <span class="keyword">if</span> (enums.contains(dev.getName())) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="b-EnumMap"><a href="#b-EnumMap" class="headerlink" title="b. EnumMap"></a>b. EnumMap</h4><p><code>EnumMap</code>是枚举的专属集合，其<code>Key</code>要求必须为<code>Enum</code>类型。注意<code>EnumMap</code>的<code>Key</code>不能为<code>null</code>，因为<code>EnumMap</code>继承了<code>AbstractMap</code>，所以<code>EnumMap</code>也有一般<code>map</code>的方法。还有个不同的地方是，在<code>new EnumMap&lt;&gt;(enum.class);</code>需要传入类型信息，即<code>Class</code>对象。</p>
-<p>假设PM要统计所有项目的开发状态：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">EnumMap&lt;DevelopEnum, Integer&gt; enumIntegerEnumMap = <span class="keyword">new</span> EnumMap&lt;&gt;(DevelopEnum.class);</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (Project project: projects) &#123;</span><br><span class="line">    Integer num = enumIntegerEnumMap.get(project.getDevStatus);</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">null</span> != num) &#123;</span><br><span class="line">        enumIntegerEnumMap.put(project.getDevStatus, num+<span class="number">1</span>);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        enumIntegerEnumMap.put(project.getDevStatus, <span class="number">1</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="枚举的设计模式应用"><a href="#枚举的设计模式应用" class="headerlink" title="枚举的设计模式应用"></a>枚举的设计模式应用</h3><h4 id="a-单例模式"><a href="#a-单例模式" class="headerlink" title="a. 单例模式"></a>a. 单例模式</h4><h4 id="b-策略模式"><a href="#b-策略模式" class="headerlink" title="b. 策略模式"></a>b. 策略模式</h4>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -1039,1214 +681,15 @@
   </article>
 
 
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/10/Java技术路线/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/05/10/Java技术路线/" class="post-title-link" itemprop="url">Java技术路线</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-05-10 21:29:46 / Modified: 22:31:41" itemprop="dateCreated datePublished" datetime="2020-05-10T21:29:46+08:00">2020-05-10</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Java/" itemprop="url" rel="index"><span itemprop="name">Java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p><strong>Java 技术路线:</strong></p>
-<p><img src="/2020/05/10/Java技术路线/java-path.jpg" alt="Java技术路线"></p>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/06/Leetcode-202-快乐数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/05/06/Leetcode-202-快乐数/" class="post-title-link" itemprop="url">Leetcode-202-快乐数</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-05-06 01:19:36" itemprop="dateCreated datePublished" datetime="2020-05-06T01:19:36+08:00">2020-05-06</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2020-06-04 00:44:15" itemprop="dateModified" datetime="2020-06-04T00:44:15+08:00">2020-06-04</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="202-快乐数"><a href="#202-快乐数" class="headerlink" title="202. 快乐数"></a>202. 快乐数</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">编写一个算法来判断一个数 n 是不是快乐数。</span><br><span class="line"></span><br><span class="line">「快乐数」定义为：对于一个正整数，每一次将该数替换为它每个位置上的数字的平方和，然后重复这个过程直到这个数变为 1，也可能是 无限循环 但始终变不到 1。如果 可以变为  1，那么这个数就是快乐数。</span><br><span class="line"></span><br><span class="line">如果 n 是快乐数就返回 True ；不是，则返回 False 。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">输入：19</span><br><span class="line">输出：true</span><br><span class="line">解释：</span><br><span class="line">12 + 92 = 82</span><br><span class="line">82 + 22 = 68</span><br><span class="line">62 + 82 = 100</span><br><span class="line">12 + 02 + 02 = 1</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>思路1：找了一下关于快乐数定义的资料，不符合快乐数定义的数即为非快乐数，有定义为<code>不是快乐数的数称为不快乐数（unhappy number），所有不快乐数的数位平方和计算，最後都会进入 4 → 16 → 37 → 58 → 89 → 145 → 42 → 20 → 4 的循环中。</code>所以会出现类似回文的那种循环重复。典型的思想就是将出现过的数字都保存下来，如果出现重复的数字并且这个数字不为<code>1</code>的话，则此数字为非快乐数。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HappyNumber_202</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        Set&lt;Integer&gt; visited = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line">        <span class="keyword">while</span> (n != <span class="number">1</span> &amp;&amp; !visited.contains(n)) &#123;</span><br><span class="line">          	<span class="comment">// 未出现过的数字放入set中</span></span><br><span class="line">            visited.add(n);</span><br><span class="line">            n = squareSum(n);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> n == <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">squareSum</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> squareSum = <span class="number">0</span>;</span><br><span class="line">      	<span class="comment">// 按要求计算平方和</span></span><br><span class="line">        <span class="keyword">while</span> (num != <span class="number">0</span>) &#123;</span><br><span class="line">            squareSum += (num % <span class="number">10</span>) * (num % <span class="number">10</span>);</span><br><span class="line">            num /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> squareSum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>思路2: 网上看到一个非常巧妙（因为节省了<code>Set</code>,所以执行时间更短）的解法，根据非快乐数和快乐数的定义，可以找出规律：无论是否为快乐数，该数字最终都会进入一个循环。所以可以用快慢指针的思想，进行计算，这样两个数最终都会相遇。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isHappy</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> fast = n;</span><br><span class="line">        <span class="keyword">int</span> slow = n;</span><br><span class="line">        <span class="keyword">do</span>&#123;</span><br><span class="line">          	<span class="comment">// 慢指针</span></span><br><span class="line">            slow = squareSum(slow);</span><br><span class="line">            fast = squareSum(fast);</span><br><span class="line">          	<span class="comment">// 执行2次，为快指针</span></span><br><span class="line">            fast = squareSum(fast);</span><br><span class="line">        &#125; <span class="keyword">while</span> (slow != fast);</span><br><span class="line">        <span class="keyword">return</span> fast == <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">squareSum</span><span class="params">(<span class="keyword">int</span> num)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> squareSum = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (num != <span class="number">0</span>) &#123;</span><br><span class="line">            squareSum += (num % <span class="number">10</span>) * (num % <span class="number">10</span>);</span><br><span class="line">            num /= <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> squareSum;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/Leetcode-581-最短无序连续子数组/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/05/04/Leetcode-581-最短无序连续子数组/" class="post-title-link" itemprop="url">Leetcode-581-最短无序连续子数组</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-05-04 00:58:14" itemprop="dateCreated datePublished" datetime="2020-05-04T00:58:14+08:00">2020-05-04</time>
-            
-
-            
-              
-
-              
-                
-                <span class="post-meta-divider">|</span>
-                
-
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Edited on</span>
-                
-                <time title="Modified: 2020-06-04 00:44:36" itemprop="dateModified" datetime="2020-06-04T00:44:36+08:00">2020-06-04</time>
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="581-最短无序连续子数组"><a href="#581-最短无序连续子数组" class="headerlink" title="581. 最短无序连续子数组"></a>581. 最短无序连续子数组</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定一个整数数组，你需要寻找一个连续的子数组，如果对这个子数组进行升序排序，那么整个数组都会变为升序排序。</span><br><span class="line"></span><br><span class="line">你找到的子数组应是最短的，请输出它的长度。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入: [2, 6, 4, 8, 10, 9, 15]</span><br><span class="line">输出: 5</span><br><span class="line">解释: 你只需要对 [6, 4, 8, 10, 9] 进行升序排序，那么整个表都会变为升序排序。</span><br></pre></td></tr></table></figure>
-<p><strong>说明：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">说明 :</span><br><span class="line"></span><br><span class="line">输入的数组长度范围在 [1, 10,000]。</span><br><span class="line">输入的数组可能包含重复元素 ，所以升序的意思是&lt;=。</span><br></pre></td></tr></table></figure>
-<p>思路：</p>
-<p>思路1：根据题意和示例，第一想法就是复制一个数组，将一个数组排序，然后对比两个数组的元素，记录第一个和最后一个不一样的元素位置，然后用最后一个元素位置<code>-</code>第一个元素位置<code>+</code>1就可以得到答案。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findUnsortedSubarray</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">       <span class="keyword">if</span> (nums == <span class="keyword">null</span> || nums.length &lt;= <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">				<span class="comment">//拷贝一份数组，进行排序</span></span><br><span class="line">        <span class="keyword">int</span>[] nums1 = Arrays.copyOf(nums, nums.length);</span><br><span class="line">        Arrays.sort(nums1);</span><br><span class="line">      	<span class="comment">//第一个不同元素的位置</span></span><br><span class="line">        <span class="keyword">int</span> left = <span class="number">0</span>;</span><br><span class="line">      	<span class="comment">//最后一个不同元素的位置</span></span><br><span class="line">        <span class="keyword">int</span> right = <span class="number">0</span>;</span><br><span class="line">      	<span class="comment">//用来确定第一个不同元素的位置</span></span><br><span class="line">        <span class="keyword">int</span> count = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (nums[i] - nums1[i] != <span class="number">0</span>) &#123;</span><br><span class="line">                count = count + <span class="number">1</span>;</span><br><span class="line">                <span class="keyword">if</span> (count == <span class="number">1</span>) &#123;</span><br><span class="line">                    left = i;</span><br><span class="line">                &#125;</span><br><span class="line">                right = i;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> count == <span class="number">0</span>?<span class="number">0</span>:right-left+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/04/Leetcode-3-无重复字符的最长子串/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/05/04/Leetcode-3-无重复字符的最长子串/" class="post-title-link" itemprop="url">Leetcode-3-无重复字符的最长子串</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-05-04 00:40:41 / Modified: 00:55:51" itemprop="dateCreated datePublished" datetime="2020-05-04T00:40:41+08:00">2020-05-04</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="3-无重复字符的最长子串"><a href="#3-无重复字符的最长子串" class="headerlink" title="3.  无重复字符的最长子串"></a>3.  无重复字符的最长子串</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1.</span><br><span class="line">输入: &quot;abcabcbb&quot;</span><br><span class="line">输出: 3 </span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;abc&quot;，所以其长度为 3。</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">输入: &quot;bbbbb&quot;</span><br><span class="line">输出: 1</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;b&quot;，所以其长度为 1。</span><br><span class="line"></span><br><span class="line">3.</span><br><span class="line">输入: &quot;pwwkew&quot;</span><br><span class="line">输出: 3</span><br><span class="line">解释: 因为无重复字符的最长子串是 &quot;wke&quot;，所以其长度为 3。</span><br><span class="line">     请注意，你的答案必须是 子串 的长度，&quot;pwke&quot; 是一个子序列，不是子串。</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>如示例3所示，但要求的是子串，而不是子序列，也就是说我们答案中的字符不应该有重复出现的。可以考虑使用字典，将出现过的字符以及字符出现的位置记录下来，同时将两个字符重复出现的位置记录下来，最后记录最大值。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">lengthOfLongestSubstring</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (s.length() == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        Map&lt;Character, Integer&gt; dict = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">int</span> tmp = -<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> res = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>; i&lt; s.length(); i++)&#123;</span><br><span class="line">            <span class="comment">//如果字符重复出现，拿出第一次出现的位置</span></span><br><span class="line">            <span class="keyword">if</span>(dict.containsKey(s.charAt(i)))&#123;</span><br><span class="line">                tmp = Math.max(dict.get(s.charAt(i)), tmp);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">//当前重复字符的长度与之前的结果对比，保留最大长度</span></span><br><span class="line">            res = Math.max(res, i-tmp);</span><br><span class="line">          	<span class="comment">//将每个字符以及位置都保存到字典当中</span></span><br><span class="line">            dict.put(s.charAt(i), i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/30/Leetcode-2-两数相加/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/04/30/Leetcode-2-两数相加/" class="post-title-link" itemprop="url">Leetcode-2-两数相加</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-04-30 00:03:54 / Modified: 00:12:16" itemprop="dateCreated datePublished" datetime="2020-04-30T00:03:54+08:00">2020-04-30</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="2-两数相加"><a href="#2-两数相加" class="headerlink" title="2.两数相加"></a>2.两数相加</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">给出两个 非空 的链表用来表示两个非负的整数。其中，它们各自的位数是按照 逆序 的方式存储的，并且它们的每个节点只能存储 一位 数字。</span><br><span class="line"></span><br><span class="line">如果，我们将这两个数相加起来，则会返回一个新的链表来表示它们的和。</span><br><span class="line"></span><br><span class="line">您可以假设除了数字 0 之外，这两个数都不会以 0 开头。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：(2 -&gt; 4 -&gt; 3) + (5 -&gt; 6 -&gt; 4)</span><br><span class="line">输出：7 -&gt; 0 -&gt; 8</span><br><span class="line">原因：342 + 465 = 807</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>数字倒叙相加，向下进一。可以从数学的角度来思考。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">addTwoNumbers</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">        ListNode res = <span class="keyword">new</span> ListNode(<span class="number">0</span>);</span><br><span class="line">        ListNode cur = res;</span><br><span class="line">        <span class="keyword">int</span> carry = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span> (l1 != <span class="keyword">null</span> || l2 != <span class="keyword">null</span> || carry != <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span> l1Val = l1 != <span class="keyword">null</span> ? l1.val : <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">int</span> l2Val = l2 != <span class="keyword">null</span> ? l2.val : <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">            <span class="keyword">int</span> sumVal = carry + l1Val + l2Val;</span><br><span class="line">            carry = sumVal / <span class="number">10</span>;</span><br><span class="line">            cur.next = <span class="keyword">new</span> ListNode(sumVal%<span class="number">10</span>);</span><br><span class="line">            cur = cur.next;</span><br><span class="line">            <span class="keyword">if</span> (l1 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                l1 = l1.next;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (l2 != <span class="keyword">null</span>) &#123;</span><br><span class="line">                l2 = l2.next;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res.next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/27/Leetcode-9-回文数/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/04/27/Leetcode-9-回文数/" class="post-title-link" itemprop="url">Leetcode-9-回文数</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-04-27 00:59:00 / Modified: 01:07:05" itemprop="dateCreated datePublished" datetime="2020-04-27T00:59:00+08:00">2020-04-27</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="9-回文数"><a href="#9-回文数" class="headerlink" title="9. 回文数"></a>9. 回文数</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">1.</span><br><span class="line">输入: 121</span><br><span class="line">输出: true</span><br><span class="line"></span><br><span class="line">2.</span><br><span class="line">输入: -121</span><br><span class="line">输出: false</span><br><span class="line">解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。</span><br><span class="line"></span><br><span class="line">3.</span><br><span class="line">输入: 10</span><br><span class="line">输出: false</span><br><span class="line">解释: 从右向左读, 为 01 。因此它不是一个回文数。</span><br><span class="line"></span><br><span class="line">Ps:</span><br><span class="line">进阶: 你能不将整数转为字符串来解决这个问题吗？</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>题意限制是<code>int</code>类型， 所以极大降低了难度，只要将正整数反转就可以得到想要的结果，关于数字反转，正如<a href="[https://markhe1222.github.io/2020/04/26/Leetcode-7-%E6%95%B4%E6%95%B0%E5%8F%8D%E8%BD%AC/](https://markhe1222.github.io/2020/04/26/Leetcode-7-整数反转/">7-整数反转</a>)当中描述的数学方法。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isPalindrome</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(x&lt;<span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> tmp = x;</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">while</span>(tmp != <span class="number">0</span>)&#123;</span><br><span class="line">            n = n *<span class="number">10</span> + tmp %<span class="number">10</span>;</span><br><span class="line">            tmp = tmp /<span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> n == x;</span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/Leetcode-7-整数反转/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Mark">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="马根花的小菜园">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2020/04/26/Leetcode-7-整数反转/" class="post-title-link" itemprop="url">Leetcode-7-整数反转</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-
-              
-                
-              
-
-              <time title="Created: 2020-04-26 00:51:20 / Modified: 01:06:39" itemprop="dateCreated datePublished" datetime="2020-04-26T00:51:20+08:00">2020-04-26</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="7-整数反转"><a href="#7-整数反转" class="headerlink" title="7.  整数反转"></a>7.  整数反转</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.</span><br><span class="line">输入: 123</span><br><span class="line">输出: 321</span><br><span class="line">2.</span><br><span class="line">输入: -123</span><br><span class="line">输出: -321</span><br><span class="line">3.</span><br><span class="line">输入: 120</span><br><span class="line">输出: 21</span><br><span class="line"></span><br><span class="line">注意:</span><br><span class="line">假设我们的环境只能存储得下32位的有符号整数，则其数值范围为 [−2^31,  2^31 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>刚看到这道题的时候，容易想到将整数转成字符串处理，对字符串进行反转，但是这样需要考虑的情况比较多，比如负号的处理，和超出数值范围的异常处理，反而将简单的问题复杂化。可以用简单的数学思维去解答，从低位到高位依次遍历取余，然后将余数遍历乘<code>10</code>进位反转，最后将结果强转成<code>int</code>类型，如果超出了数据范围，数据会取补码，如此也解决了取值范围的问题。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">long</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">        n = n * <span class="number">10</span> + x % <span class="number">10</span>;</span><br><span class="line">        x = x / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>) n == n ? (<span class="keyword">int</span>) n : <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="Next page"></i></a>
-  </nav>
-
 
 
           </div>
           
+
+  
+
+
 
         </div>
         
@@ -2266,8 +709,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -2357,6 +809,23 @@
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是泛型？"><span class="nav-number">1.</span> <span class="nav-text">什么是泛型？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#为什么要用泛型？"><span class="nav-number">2.</span> <span class="nav-text">为什么要用泛型？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型的类型擦除"><span class="nav-number">3.</span> <span class="nav-text">泛型的类型擦除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型的使用"><span class="nav-number">4.</span> <span class="nav-text">泛型的使用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型类"><span class="nav-number">4.1.</span> <span class="nav-text">泛型类</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型接口"><span class="nav-number">4.2.</span> <span class="nav-text">泛型接口</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型方法"><span class="nav-number">4.3.</span> <span class="nav-text">泛型方法</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#类中使用泛型方法："><span class="nav-number">4.3.1.</span> <span class="nav-text">类中使用泛型方法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#可变参数的泛型方法："><span class="nav-number">4.3.2.</span> <span class="nav-text">可变参数的泛型方法：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#静态方法使用泛型参数："><span class="nav-number">4.3.3.</span> <span class="nav-text">静态方法使用泛型参数：</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#泛型方法小结："><span class="nav-number">4.3.4.</span> <span class="nav-text">泛型方法小结：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型通配符"><span class="nav-number">5.</span> <span class="nav-text">泛型通配符</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#无界通配符-lt-gt"><span class="nav-number">5.1.</span> <span class="nav-text">无界通配符 &lt;?&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#上界通配符-lt-extends-T-gt"><span class="nav-number">5.2.</span> <span class="nav-text">上界通配符&lt;? extends T&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#下界通配符-lt-super-T-gt"><span class="nav-number">5.3.</span> <span class="nav-text">下界通配符&lt;? super T&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-gt-和-gt-T-gt-的区别"><span class="nav-number">5.4.</span> <span class="nav-text">&lt;?&gt;和&gt;T&gt;的区别</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#T可以用来保证泛型参数的一致性"><span class="nav-number">5.4.1.</span> <span class="nav-text">T可以用来保证泛型参数的一致性</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#类型参数T可以多重限定而通配符-不行"><span class="nav-number">5.4.2.</span> <span class="nav-text">类型参数T可以多重限定而通配符?不行</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#List-lt-T-gt-，List-lt-Object-gt-，List-lt-gt-区别"><span class="nav-number">5.5.</span> <span class="nav-text">List&lt;T&gt;，List&lt;Object&gt;，List&lt;?&gt;区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#lt-T-gt-，Class-lt-T-gt-，Class-lt-gt-的区别"><span class="nav-number">5.6.</span> <span class="nav-text">&lt;T&gt;，Class&lt;T&gt;，Class&lt;?&gt;的区别</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型的类型擦除详解"><span class="nav-number">6.</span> <span class="nav-text">泛型的类型擦除详解</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#泛型类型擦除后保留的原始类型"><span class="nav-number">6.1.</span> <span class="nav-text">泛型类型擦除后保留的原始类型</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#什么是原始类型？"><span class="nav-number">6.1.1.</span> <span class="nav-text">什么是原始类型？</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Object泛型"><span class="nav-number">6.1.2.</span> <span class="nav-text">Object泛型</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#先检查，再编译以及编译的对象和引用传递问题"><span class="nav-number">6.2.</span> <span class="nav-text">先检查，再编译以及编译的对象和引用传递问题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#先检查，再编译"><span class="nav-number">6.2.1.</span> <span class="nav-text">先检查，再编译</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#编译的对象"><span class="nav-number">6.2.2.</span> <span class="nav-text">编译的对象</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#引用传递问题"><span class="nav-number">6.2.3.</span> <span class="nav-text">引用传递问题</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#自动类型转换"><span class="nav-number">6.3.</span> <span class="nav-text">自动类型转换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#类型擦除与多态"><span class="nav-number">6.4.</span> <span class="nav-text">类型擦除与多态</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么泛型变量不能是基本数据类型"><span class="nav-number">6.5.</span> <span class="nav-text">为什么泛型变量不能是基本数据类型</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#为什么泛型类型不能使用instanceof"><span class="nav-number">6.6.</span> <span class="nav-text">为什么泛型类型不能使用instanceof</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考"><span class="nav-number">7.</span> <span class="nav-text">参考</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -2485,6 +954,10 @@
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -2500,6 +973,8 @@
 
   
 
+
+  
 
 
   
