@@ -320,6 +320,180 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/27/Leetcode-9-回文数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Mark">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="马根花的小菜园">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2020/04/27/Leetcode-9-回文数/" class="post-title-link" itemprop="url">Leetcode-9-回文数</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+
+              
+                
+              
+
+              <time title="Created: 2020-04-27 00:59:00 / Modified: 01:07:05" itemprop="dateCreated datePublished" datetime="2020-04-27T00:59:00+08:00">2020-04-27</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Algorithm/" itemprop="url" rel="index"><span itemprop="name">Algorithm</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>
+              9. 回文数题目：
+判断一个整数是否是回文数。回文数是指正序（从左向右）和倒序（从右向左）读都是一样的整数。
+示例：
+1.输入: 121输出: true2.输入: -121输出: false解释: 从左向右读, 为 -121 。 从右向左读, 为 121- 。因此它不是一个回文数。3.输入: 10输
+              ...
+            </p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/04/27/Leetcode-9-回文数/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/26/Leetcode-7-整数反转/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -424,15 +598,22 @@
       
         
           
-            <h2 id="7-整数反转"><a href="#7-整数反转" class="headerlink" title="7.  整数反转"></a>7.  整数反转</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.</span><br><span class="line">输入: 123</span><br><span class="line">输出: 321</span><br><span class="line">2.</span><br><span class="line">输入: -123</span><br><span class="line">输出: -321</span><br><span class="line">3.</span><br><span class="line">输入: 120</span><br><span class="line">输出: 21</span><br><span class="line"></span><br><span class="line">注意:</span><br><span class="line">假设我们的环境只能存储得下32位的有符号整数，则其数值范围为 [−2^31,  2^31 − 1]。请根据这个假设，如果反转后整数溢出那么就返回 0。</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>刚看到这道题的时候，容易想到将整数转成字符串处理，对字符串进行反转，但是这样需要考虑的情况比较多，比如负号的处理，和超出数值范围的异常处理，反而将简单的问题复杂化。可以用简单的数学思维去解答，从低位到高位依次遍历取余，然后将余数遍历乘<code>10</code>进位反转，最后将结果强转成<code>int</code>类型，如果超出了数据范围，数据会取补码，如此也解决了取值范围的问题。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">reverse</span><span class="params">(<span class="keyword">int</span> x)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">long</span> n = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span> (x != <span class="number">0</span>) &#123;</span><br><span class="line">        n = n * <span class="number">10</span> + x % <span class="number">10</span>;</span><br><span class="line">        x = x / <span class="number">10</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> (<span class="keyword">int</span>) n == n ? (<span class="keyword">int</span>) n : <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+            <p>
+              7.  整数反转题目：
+给出一个 32 位的有符号整数，你需要将这个整数中每位上的数字进行反转。
+示例：
+1.输入: 123输出: 3212.输入: -123输出: -3213.输入: 120输出: 21注意:假设我们的环境只能存储得下32位的有符号整数，则其数值范围为 [−2^31,  2^31 
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/04/26/Leetcode-7-整数反转/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -603,43 +784,26 @@
       
         
           
-            <p>形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：</p>
-<ol>
-<li><p>栈（Stack）：存放的都是方法中的局部变量；方法的运行在栈当中。</p>
-<p>局部变量：方法的参数，或者是方法{}内部的变量</p>
-<p>作用域：一旦超出作用域，立刻从栈内存释放</p>
-</li>
-<li><p>堆（Heap）：凡是new出来的（对象/基础类型），都存放在堆内存中。</p>
-<p>堆内存的存放的（对象）都有一个地址值：16进制</p>
-<p>堆内存里面的数据都有默认值。规则：</p>
-<p>a. 若为整数<code>int</code>：默认值为<code>0</code>；</p>
-<p>b. 若为浮点数<code>float</code>：默认值为<code>0.0</code>；</p>
-<p>c. 若为字符<code>char</code>：默认值为<code>&#39;\u0000&#39;</code>;</p>
-<p>d. 若为布尔值<code>boolean</code>：默认值为<code>false</code>；</p>
-<p>e. 若为引用类型：默认值为<code>null</code>  </p>
-</li>
-<li><p>方法区（Method Area）：存储的是<code>.class</code>相关信息，包含方法的信息</p>
-</li>
-<li><p>本地方法栈（Native Method Stack）：与操作系统相关</p>
-</li>
-<li><p>寄存器（PC Register）：与CPU相关</p>
-</li>
-</ol>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoMemory</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] array = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">3</span>];</span><br><span class="line">        System.out.println(array);</span><br><span class="line">        System.out.println(array[<span class="number">0</span>]);</span><br><span class="line">        System.out.println(array[<span class="number">1</span>]);</span><br><span class="line">        System.out.println(array[<span class="number">2</span>]);</span><br><span class="line">        System.out.println(<span class="string">"=============="</span>);</span><br><span class="line"></span><br><span class="line">        array[<span class="number">1</span>] = <span class="number">10</span>;</span><br><span class="line">        array[<span class="number">2</span>] = <span class="number">20</span>;</span><br><span class="line">        System.out.println(array);</span><br><span class="line">        System.out.println(array[<span class="number">0</span>]);</span><br><span class="line">        System.out.println(array[<span class="number">1</span>]);</span><br><span class="line">        System.out.println(array[<span class="number">2</span>]);</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>运行结果：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[I@<span class="number">1</span>d44bcfa</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">0</span></span><br><span class="line">==============</span><br><span class="line">[I@<span class="number">1</span>d44bcfa</span><br><span class="line"><span class="number">0</span></span><br><span class="line"><span class="number">10</span></span><br><span class="line"><span class="number">20</span></span><br></pre></td></tr></table></figure>
-<p><strong>内存分布图：</strong></p>
-<p><img src="/2020/04/25/Java中的内存划分/JavaMemory.png" alt="JavaMemory"></p>
-<p><strong>附件：</strong></p>
-<ul>
-<li><p><a href="https://www.dazhuanlan.com/2019/12/18/5df99e24d6d27/" target="_blank" rel="noopener">解决hexo插入图片的问题</a></p>
-</li>
-<li><p><a href="https://www.bilibili.com/video/BV1A4411K7Gx?p=86" target="_blank" rel="noopener">视频简介</a></p>
-</li>
-</ul>
+            <p>
+              形象介绍介绍一下java的内存划分（笔记），主要分为5个部分：
 
+栈（Stack）：存放的都是方法中的局部变量；方法的运行在栈当中。
+局部变量：方法的参数，或者是方法{}内部的变量
+作用域：一旦超出作用域，立刻从栈内存释放
+
+堆（Heap）：凡是new出来的（对象/基础类型），都存放在堆内存中。
+堆
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/04/25/Java中的内存划分/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -798,19 +962,20 @@
       
         
           
-            <h2 id="20-有效括号"><a href="#20-有效括号" class="headerlink" title="20.有效括号"></a>20.有效括号</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">给定一个只包括 &apos;(&apos;，&apos;)&apos;，&apos;&#123;&apos;，&apos;&#125;&apos;，&apos;[&apos;，&apos;]&apos; 的字符串，判断字符串是否有效。</span><br><span class="line"></span><br><span class="line">有效字符串需满足：</span><br><span class="line">	1.左括号必须用相同类型的右括号闭合。</span><br><span class="line">  2.左括号必须以正确的顺序闭合。</span><br><span class="line">注意空字符串可被认为是有效字符串。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">1.</span><br><span class="line">输入: &quot;()&quot;</span><br><span class="line">输出: true</span><br><span class="line">2.</span><br><span class="line">输入: &quot;()[]&#123;&#125;&quot;</span><br><span class="line">输出: true</span><br><span class="line">3.</span><br><span class="line">输入: &quot;(]&quot;</span><br><span class="line">输出: false</span><br><span class="line">4.</span><br><span class="line">输入: &quot;([)]&quot;</span><br><span class="line">输出: false</span><br><span class="line">5.</span><br><span class="line">输入: &quot;&#123;[]&#125;&quot;</span><br><span class="line">输出: true</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>思路1: 根据括号的属性，需要成对匹配，并且可以嵌套使用。由此可以联想到栈的特点，先进后出。 更具括号的前半边，可以让预期的后半边的括号入栈，最后对比栈内的元素，如果符合要求就出栈，最终栈为空的话，符合条件。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        Stack&lt;Character&gt; stack = <span class="keyword">new</span> Stack&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(Character c: s.toCharArray()) &#123;</span><br><span class="line">            <span class="comment">// 根据括号前半边，让预期的后半边括号入栈</span></span><br><span class="line">            <span class="keyword">if</span>(c == <span class="string">'('</span>)&#123;</span><br><span class="line">                stack.push(<span class="string">')'</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">'['</span>) &#123;</span><br><span class="line">                stack.push(<span class="string">']'</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (c == <span class="string">'&#123;'</span>) &#123;</span><br><span class="line">                stack.push(<span class="string">'&#125;'</span>);</span><br><span class="line">            &#125; <span class="keyword">else</span> <span class="keyword">if</span> (stack.isEmpty() || !c.equals(stack.pop())) &#123; <span class="comment">// 对比预期的后半边括号，符合条件出栈</span></span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> stack.isEmpty();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>思路2: 后面看到另外一种方法，角度特别新奇。可能运行时间比较长，但是也是很有意义。因为符合条件的括号，无论如何都会有一对是在一起的，如果我们和玩连连看的游戏那样，将最先符合条件的那对括号先抵消，那么如此遍历抵消下去，最终字符串为空的话，则符合条件。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isValid</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">while</span> (s.contains(<span class="string">"()"</span>) || s.contains(<span class="string">"&#123;&#125;"</span>) || s.contains(<span class="string">"[]"</span>)) &#123;</span><br><span class="line">            s = s.replace(<span class="string">"()"</span>, <span class="string">""</span>);</span><br><span class="line">            s = s.replace(<span class="string">"&#123;&#125;"</span>, <span class="string">""</span>);</span><br><span class="line">            s = s.replace(<span class="string">"[]"</span>, <span class="string">""</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">""</span>.equals(s);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              20.有效括号题目：
+给定一个只包括 &apos;(&apos;，&apos;)&apos;，&apos;&#123;&apos;，&apos;&#125;&apos;，&apos;[&apos;，&apos;]&apos; 的字符串，判断字符串是否有效。有效字符串需满足：	1.左括号必须用相同类型
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/04/25/Leetcode-20-有效的括号/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -969,16 +1134,24 @@
       
         
           
-            <h2 id="21-合并两个有序链表"><a href="#21-合并两个有序链表" class="headerlink" title="21. 合并两个有序链表"></a>21. 合并两个有序链表</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4</span><br><span class="line">输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>根据题意，两个待合并的链表本身是有序的，所以我们只要按顺序递归遍历两个链表，依次对比元素的大小，不需要进行完全排序。 </p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MergeTwoLists_21</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ListNode <span class="title">mergeTwoLists</span><span class="params">(ListNode l1, ListNode l2)</span> </span>&#123;</span><br><span class="line">        <span class="comment">// 递归解释条件</span></span><br><span class="line">        <span class="keyword">if</span>(l1 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(l2 == <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 比较两个元素的值，将小的链表的下一个元素继续和当前大的链表的值进行比较排序；</span></span><br><span class="line">        <span class="comment">// 并且依次返回递归小链表的头，最后拼接返回新的链表</span></span><br><span class="line">        <span class="keyword">if</span> (l1.val &lt; l2.val) &#123;</span><br><span class="line">            l1.next = mergeTwoLists(l1.next, l2);</span><br><span class="line">            <span class="keyword">return</span> l1;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            l2.next = mergeTwoLists(l1, l2.next);</span><br><span class="line">            <span class="keyword">return</span> l2;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              21. 合并两个有序链表题目：
+将两个升序链表合并为一个新的升序链表并返回。新链表是通过拼接给定的两个链表的所有节点组成的。
+示例：
+输入：1-&gt;2-&gt;4, 1-&gt;3-&gt;4输出：1-&gt;1-&gt;2-&gt;3-&gt;4-&gt;4
+思路：
+根据题意，两个待合并的链表
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/04/24/Leetcode-21-合并两个有序链表/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1137,21 +1310,22 @@
       
         
           
-            <h2 id="199-二叉树的右视图"><a href="#199-二叉树的右视图" class="headerlink" title="199. 二叉树的右视图"></a>199. 二叉树的右视图</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给定一棵二叉树，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,2,3,null,5,null,4]</span><br><span class="line">输出: [1, 3, 4]</span><br><span class="line">解释:</span><br><span class="line"></span><br><span class="line">   1            &lt;---</span><br><span class="line"> /   \</span><br><span class="line">2     3         &lt;---</span><br><span class="line"> \     \</span><br><span class="line">  5     4       &lt;---</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>思路1（DFS）:</p>
-<p>老套路，看到树相关的题目，首先要联想到递归调用，遍历树等关键词。根据题意，我们需要找出树的每一层的最后一个节点。根据前序遍历的顺序 [根节点-&gt; 左节点 -&gt; 右节点] ，可以推断出与其相反的遍历顺序 [根节点 -&gt; 右节点 -&gt; 左节点] ，如此就可以保证每次先访问到右节点，如果右节点为空则再遍历左节点。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RightSideView_199</span> </span>&#123;</span><br><span class="line">    <span class="comment">// DFS</span></span><br><span class="line">    List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">rightSideView</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        dfs(root, <span class="number">0</span>);</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(TreeNode root, <span class="keyword">int</span> depth)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 先访问 当前节点，再递归地访问 右子树 和 左子树</span></span><br><span class="line">      	<span class="comment">// 如果当前节点所在深度还没有出现在res里，说明在该深度下当前节点是第一个被访问的节点，因此将当前节点加入res中。</span></span><br><span class="line">        <span class="keyword">if</span> (res.size() == depth) &#123;</span><br><span class="line">            res.add(root.val);</span><br><span class="line">        &#125;</span><br><span class="line">        depth++;</span><br><span class="line">        dfs(root.right, depth);</span><br><span class="line">        dfs(root.left, depth);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>思路2（BFS）:</p>
-<p>根据广度优先的遍历算法，我们只要记住每一层树的最后一个元素就能满足题意要求了。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">RightSideView_199</span> </span>&#123;</span><br><span class="line">    <span class="comment">// BFS</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> List&lt;Integer&gt; <span class="title">rightSideView_2</span><span class="params">(TreeNode root)</span> </span>&#123;</span><br><span class="line">        List&lt;Integer&gt; res = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">        <span class="keyword">if</span> (root == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> res;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">// 将每层的所有节点都放在queue中</span></span><br><span class="line">        Queue&lt;TreeNode&gt; queue = <span class="keyword">new</span> LinkedList&lt;&gt;();</span><br><span class="line">        <span class="comment">// 第一层的根节点</span></span><br><span class="line">        queue.offer(root);</span><br><span class="line">        <span class="comment">// 遍历所有层，直至最后一层</span></span><br><span class="line">        <span class="keyword">while</span> (!queue.isEmpty()) &#123;</span><br><span class="line">            <span class="keyword">int</span> size = queue.size();</span><br><span class="line">            <span class="comment">// 遍历每一层的所有节点，并将下一层的所有节点放入queue中</span></span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; size; i++) &#123;</span><br><span class="line">                TreeNode node = queue.poll();</span><br><span class="line">                <span class="keyword">if</span> (node.left != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.offer(node.left);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (node.right != <span class="keyword">null</span>) &#123;</span><br><span class="line">                    queue.offer(node.right);</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="comment">// 将当前层的最后一个节点放入结果列表</span></span><br><span class="line">                <span class="keyword">if</span> (i == size - <span class="number">1</span>) &#123;</span><br><span class="line">                    res.add(node.val);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              199. 二叉树的右视图题目：
+给定一棵二叉树，想象自己站在它的右侧，按照从顶部到底部的顺序，返回从右侧所能看到的节点值。
+示例：
+输入: [1,2,3,null,5,null,4]输出: [1, 3, 4]解释:   1            &lt;--- /   \2     3       
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/04/23/Leetcode-199-二叉树的右视图/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1310,21 +1484,22 @@
       
         
           
-            <h2 id="1-两数之和"><a href="#1-两数之和" class="headerlink" title="1. 两数之和"></a>1. 两数之和</h2><p><strong>题目： </strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。</span><br><span class="line"></span><br><span class="line">你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><figcaption><span>nums </span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">给定 nums = [2, 7, 11, 15], target = 9</span><br><span class="line"></span><br><span class="line">因为 nums[0] + nums[1] = 2 + 7 = 9</span><br><span class="line">所以返回 [0, 1]</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>思路1:</p>
-<p>比较传统的思路，按顺序多次遍历数组进行查询，看是数组中是否有符合条件的答案。但是两个for循环的嵌套大大地提高了算法的时间复杂度。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TwoSum</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i=<span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">int</span> j = target - nums[i];</span><br><span class="line">            <span class="keyword">for</span> (<span class="keyword">int</span> x = i+<span class="number">1</span>; x &lt; nums.length; x++) &#123;</span><br><span class="line">                <span class="keyword">if</span> (j == nums[x]) &#123;</span><br><span class="line">                    res[<span class="number">0</span>] = i;</span><br><span class="line">                    res[<span class="number">1</span>] = x;</span><br><span class="line">                    <span class="keyword">return</span> res;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>思路2:</p>
-<p>为了减少思路1当中的for循环嵌套，可以考虑是否利用一个map来记录数组值和对应的位置索引？ 考虑到每次循环记录的是我们已有元素的遍历，根据题意，我们可以在map当中记录每个元素对应补数的值，这样遍历下一个数组元素时，就可以判断满足条件的值是否在map当中存在。可以大大降低算法的时间复杂度。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.HashMap;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TwoSum</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span>[] twoSum(<span class="keyword">int</span>[] nums, <span class="keyword">int</span> target) &#123;</span><br><span class="line">        <span class="keyword">int</span>[] res = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">2</span>];</span><br><span class="line"></span><br><span class="line">        HashMap&lt;Integer, Integer&gt; kv = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i++) &#123;</span><br><span class="line">            <span class="keyword">if</span> (kv.containsKey(nums[i])) &#123;</span><br><span class="line">                res[<span class="number">0</span>] = i;</span><br><span class="line">                res[<span class="number">1</span>] = kv.get(nums[i]);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// 将遍历过的数组元素的补数和下标事先保存</span></span><br><span class="line">          	<span class="comment">// 以便下次遍历的时候可以判断当前补数是否存在</span></span><br><span class="line">            kv.put(target - nums[i], i);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> res;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              1. 两数之和题目： 
+给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。
+示例：
+nums 给定 nums = [2, 7, 11, 15], targ
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/04/21/Leetcode-1-两数之和/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1483,17 +1658,22 @@
       
         
           
-            <h2 id="617-合并二叉树"><a href="#617-合并二叉树" class="headerlink" title="617. 合并二叉树"></a>617. 合并二叉树</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。</span><br><span class="line"></span><br><span class="line">你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则**不为** NULL 的节点将直接作为新二叉树的节点。</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">	Tree 1                     Tree 2                  </span><br><span class="line">          1                         2                             </span><br><span class="line">         / \                       / \                            </span><br><span class="line">        3   2                     1   3                        </span><br><span class="line">       /                           \   \                      </span><br><span class="line">      5                             4   7                  </span><br><span class="line">输出: </span><br><span class="line">合并后的树:</span><br><span class="line">	     3</span><br><span class="line">	    / \</span><br><span class="line">	   4   5</span><br><span class="line">	  / \   \ </span><br><span class="line">	 5   4   7</span><br><span class="line">	 </span><br><span class="line">注意: 合并必须从两个树的根节点开始。</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong></p>
-<p>涉及二叉树相关的算法，首先要考虑到递归调用（二叉树遍历常用套路）</p>
-<p>因为这里需要重新生成一棵新的数，我们只要选取其中的一棵树为基准就行，如另外一棵树的节点为null的话，则返回另一棵树的节点。以此遍历所有的节点，最后返回新树的根节点。</p>
-<p><strong>代码：</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for a binary tree node.</span></span><br><span class="line"><span class="comment"> * public class TreeNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     TreeNode left;</span></span><br><span class="line"><span class="comment"> *     TreeNode right;</span></span><br><span class="line"><span class="comment"> *     TreeNode(int x) &#123; val = x; &#125;</span></span><br><span class="line"><span class="comment"> * &#125;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">mergeTrees</span><span class="params">(TreeNode t1, TreeNode t2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (t1 == <span class="keyword">null</span> &amp;&amp; t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (t1 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> t2;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (t2 == <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> t1;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        t1.val = t1.val + t2.val;</span><br><span class="line">        t1.left = mergeTrees(t1.left, t2.left);</span><br><span class="line">        t1.right = mergeTrees(t1.right, t2.right);</span><br><span class="line">        <span class="keyword">return</span> t1;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              617. 合并二叉树题目：
+给定两个二叉树，想象当你将它们中的一个覆盖到另一个上时，两个二叉树的一些节点便会重叠。你需要将他们合并为一个新的二叉树。合并的规则是如果两个节点重叠，那么将他们的值相加作为节点合并后的新值，否则**不为** NULL 的节点将直接作为新二叉树的节点。
+示例：
+	Tree 
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/04/21/Leetcode-617-合并二叉树-md/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1652,19 +1832,22 @@
       
         
           
-            <h2 id="397-整数替换"><a href="#397-整数替换" class="headerlink" title="397. 整数替换"></a>397. 整数替换</h2><p><strong>题目：</strong></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">给定一个正整数 n，你可以做如下操作：</span><br><span class="line">1. 如果 n 是偶数，则用 n / 2替换 n。</span><br><span class="line">2. 如果 n 是奇数，则可以用 n + 1或n - 1替换 n。</span><br><span class="line">n 变为 1 所需的最小替换次数是多少？</span><br></pre></td></tr></table></figure>
-<p><strong>示例：</strong></p>
-  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1. 输入： 8</span><br><span class="line">   输出： 3</span><br><span class="line">   解释： 8 -&gt; 4 -&gt; 2 -&gt; 1</span><br><span class="line">   </span><br><span class="line">2. 输入： 7</span><br><span class="line">   输出： 4</span><br><span class="line">   解释：7 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1</span><br><span class="line">        或</span><br><span class="line">        7 -&gt; 6 -&gt; 3 -&gt; 2 -&gt; 1</span><br></pre></td></tr></table></figure>
-<p><strong>思路：</strong> </p>
-<p>递归思想，假设一个能返回最小步子的函数func(int n)</p>
-<p>终止条件为：n=1时，返回0</p>
-<p>n为偶数时，返回值为：(遍历次数 + 1) + func(n/2)</p>
-<p>n为奇数时，返回值为：(遍历次数 + 1) + [func(n+1) , func(n-1)]的最小值</p>
-<p><strong>代码：</strong></p>
- <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">IntegerReplacement_397</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">integerReplacement</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">int</span>) func(n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">long</span> <span class="title">func</span><span class="params">(<span class="keyword">long</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (n % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> func(n / <span class="number">2</span>) + <span class="number">1</span>;</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> Math.min(func(n - <span class="number">1</span>), func(n + <span class="number">1</span>)) + <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        IntegerReplacement_397 test = <span class="keyword">new</span> IntegerReplacement_397();</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">8</span>;</span><br><span class="line">        System.out.println(test.integerReplacement(n));</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
+            <p>
+              397. 整数替换题目：
+给定一个正整数 n，你可以做如下操作：1. 如果 n 是偶数，则用 n / 2替换 n。2. 如果 n 是奇数，则可以用 n + 1或n - 1替换 n。n 变为 1 所需的最小替换次数是多少？
+示例：
+  1. 输入： 8   输出： 3   解释： 8 -&gt; 4 
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2020/04/17/Leetcode-397-整数替换/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1835,39 +2018,20 @@
       
         
           
-            <p>在介绍这些概念之前我们先理解一下另外两个概念POJO和JavaBean。</p>
-<h3 id="POJO"><a href="#POJO" class="headerlink" title="POJO"></a><strong>POJO</strong></h3><p>POJO(Plain Oridinary Java Object/ Plain Old Java Object) 称为简单Java对象，具体定义是：有一些private参数作为对象的属性，然后针对每个参数定义get和set方法供外部访问，没有任何类即成，也没有实现任何借口，更没有引用任何气态框架的java对象；</p>
-<p>例子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> String name;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.name = name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> age;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.age = age;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="JavaBean"><a href="#JavaBean" class="headerlink" title="JavaBean"></a><strong>JavaBean</strong></h3><p>JavaBean是一种用Java语言写成的可重用组件。JavaBean符合一定规范编写的Java类。所以JavaBean不是一种技术，而是一种规范。大家针对这种规范，总结了很多开发技巧，做出很多组件或工具。符合这种规范的类，可以被其它的程序员或者框架使用。</p>
-<p>总结出来的规范为：</p>
-<ul>
-<li>所有属性都为private；</li>
-<li>这个类必须有一个公共的缺省的构造函数(即无参数的构造器)；</li>
-<li>这个类的属性只能使用get和set来访问，其它的方法遵从<a href="https://blog.csdn.net/u012116457/article/details/22582393" target="_blank" rel="noopener">Java标准命名规范</a>;</li>
-<li>这个类是可<a href="http://www.blogjava.net/jiangshachina/archive/2012/02/13/369898.html" target="_blank" rel="noopener">序列化的</a>(实现serializable接口)</li>
-</ul>
-<p>例子：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserInfo</span> <span class="keyword">implements</span> <span class="title">java</span>.<span class="title">io</span>.<span class="title">Serializable</span></span>&#123; </span><br><span class="line"> </span><br><span class="line">    <span class="comment">//实现serializable接口。  </span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">1L</span>;  </span><br><span class="line"> </span><br><span class="line">    <span class="keyword">private</span> String name;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> age;  </span><br><span class="line">      </span><br><span class="line">    <span class="comment">//无参构造器  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">UserInfo</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">	</span><br><span class="line">    &#125;  </span><br><span class="line">	</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.name = name;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">return</span> age;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;  </span><br><span class="line">        <span class="keyword">this</span>.age = age;  </span><br><span class="line">    &#125;  </span><br><span class="line">  </span><br><span class="line">    <span class="comment">//javabean当中可以有其它的逻辑方法  </span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">userInfoPrint</span><span class="params">()</span></span>&#123;  </span><br><span class="line">        System.out.println(<span class="string">""</span>);  </span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-<h3 id="J2EE"><a href="#J2EE" class="headerlink" title="J2EE"></a><strong>J2EE</strong></h3><p>介绍完前面的POJO和JavaBean现在开始介绍J2EE。</p>
-<p>首先要区分的是J2EE和Java的不同，其实Java不仅仅是代表了编程语言，应该是代表了一种编程体系(软件系统系统的一种流派)，比如，和其相对应地另外一大体系是出自微软的.NET.</p>
-<p>J2EE(Java 2 Platform, Enterprise Edition)可以理解为:</p>
-<blockquote>
-<p><strong>J2EE = Java2 + 开发企业级软件的标准</strong></p>
-</blockquote>
-<pre><code>*注： 从java 1.2 以后的版本都称为Java2*
-</code></pre><p>所以可解释为J2EE是基于Java2的基础上，为了合理利用软件开发公用复用的原则，而订制的一系列的标准，而通常这些标准又会以一系列的软件库的形式存在(同一个标准可以有多个实现)。所以进一步的通俗理解：J2EE就是分别为java领域的企业软件开发提供的一系列的软件库，供大家使用。这里的软件库，有框架的，也有驱动库等等。</p>
-<h3 id="EJB"><a href="#EJB" class="headerlink" title="EJB"></a><strong>EJB</strong></h3><p>EJB(Enterprise JavaBean)其实就是J2EE这个标准中的一项关键技术，是普通JavaBeans的一种提升和规范，因为企业信息系统开发中需要一个可伸缩的性能和事务、安全机制，这样能保证企业系统平滑发展，而不是发展到一种规模重新更换一套软件系统。</p>
-<p><strong>官方解释</strong>：商务软件的核心部分是它的业务逻辑。业务逻辑抽象了整个商务过程的流程，并使用计算机语言将他们实现。</p>
-<p>一般的应用场景是比较重量级的企业级应用当中，这种业务逻辑会很繁重和复杂，EJB其实就是将属于业务逻辑当中的那些类都从客户端抽离出来，放到一个组件中，并将这个组件放到服务器上运行。</p>
-<h4 id="EJB的实现技术"><a href="#EJB的实现技术" class="headerlink" title="-     EJB的实现技术"></a><strong>-     EJB的实现技术</strong></h4><p>EJB 是运行在独立服务器上的组件，客户端是通过网络对EJB 对象进行调用的。在Java中，能够实现远程对象调用的技术是RMI(Remote Method Invocation)，而EJB 技术基础正是RMI。通过RMI 技术，J2EE将EJB 组件创建为远程对象，客户端就可以通过网络调用EJB 对象了。</p>
-<h5 id="RMI"><a href="#RMI" class="headerlink" title="-    RMI "></a><strong>-    <a href="https://blog.csdn.net/peterkang202/article/details/52397147" target="_blank" rel="noopener">RMI</a> </strong></h5><p>中文名称是”远程方法调用”，它就是利用Java 对象序列化的机制实现分布式计算，实现远程类对象的实例化以及调用的方法。说的更清楚些，就是利用对象序列化来实现远程调用，也就是上面两个概念的结合体，利用这个方法来调用远程的类的时候，就不需要编写Socket 程序了，也不需要把对象进行序列化操作，直接调用就行了非常方便。远程方法调用是一种计算机之间对象互相调用对方函数，启动对方进程的一种机制，使用这种机制，某一台计算机上的对象在调用另外一台计算机上的方法时，使用的程序语法规则和在本地机上对象间的方法调用的语法规则一样。</p>
-<p><strong>优点：</strong> </p>
-<p>这种机制给分布计算的系统设计、编程都带来了极大的方便。只要按照RMI 规则设计程序，可以不必再过问在RMI 之下的网络细节了，如：TCP 和Socket 等等。任意两台计算机之间的通讯完全由RMI 负责。调用远程计算机上的对象就像本地对象一样方便。RMI 可将完整的对象作为参数和返回值进行传递，而不仅仅是预定义的数据类型。也就是说，可以将类似Java 哈西表这样的复杂类型作为一个参数进行传递。</p>
-<p><a href="https://www.cnblogs.com/ggjucheng/archive/2012/01/06/2314067.html" target="_blank" rel="noopener">缺点</a>：</p>
-<p>如果是较为简单的方法调用，其执行效率也许会比本地执行慢很多，即使和远程Socket机制的简单数据返回的应用相比，也会慢一些，原因是，其在网络间需要传递的信息不仅仅包含该函数的返回值信息，还会包含该对象序列化后的字节内容。</p>
-
+            <p>
+              在介绍这些概念之前我们先理解一下另外两个概念POJO和JavaBean。
+POJOPOJO(Plain Oridinary Java Object/ Plain Old Java Object) 称为简单Java对象，具体定义是：有一些private参数作为对象的属性，然后针对每个参数定义get和s
+              ...
+            </p>
+          <!--noindex-->
           
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/05/12/理解J2EE和EJB/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -1953,7 +2117,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">19</span>
+                    <span class="site-state-item-count">20</span>
                     <span class="site-state-item-name">posts</span>
                   </a>
                 </div>
@@ -1976,7 +2140,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">3</span>
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">categories</span>
                   </a>
                 </div>
